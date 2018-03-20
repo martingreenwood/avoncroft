@@ -1,0 +1,1054 @@
+/*
+* Skeleton V2.0.4
+* Copyright 2014, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 12/9/2014
+* Sass Version by Seth Coelen https://github.com/whatsnewsaes
+*/
+
+.map {
+	width: 100%;
+	height: 400px;
+	border: #ccc solid 1px;
+	margin: 20px 0;
+
+	/* fixes potential theme css conflict */
+	img {
+	   max-width: inherit !important;
+	}
+}
+
+.sociallinks {
+
+	ul {
+		list-style: none;
+		margin: 20px 0 0 0;
+
+		li {
+			margin: 0 5px 0 0;
+			display: inline-block;
+
+			a {
+				background-color: white;
+				color: $primary-color !important;
+				font-size: 16px;
+				width: 32px;
+				height: 32px;
+				padding: 0;
+				display: block;
+				text-align: center;
+				border-radius: 50%;
+				line-height: 1;
+
+				svg {
+					margin-bottom: 0;
+					padding: 8px 0px;
+					display: inline-block;
+				}
+			}
+		}
+	}
+}
+
+#content {
+	background-color: $light-grey;
+}
+
+#primary {
+	padding: 60px 0;
+}
+
+#signup {
+	background-color: white;
+	padding: 60px 0;
+
+	.mc-field-group {
+		display: inline-block;
+		width: 78%;
+		float: left;
+		margin-right: 2%;
+
+		input[type="email"], input[type="number"], input[type="search"], input[type="text"], input[type="tel"], input[type="url"], input[type="password"] {
+			width: 100%;
+			border-color: #eeeeee;
+			border-radius: 0;
+		}
+	}
+
+	.mc-button-group {
+		display: inline-block;
+		widows: 20%;
+		float: left;
+
+		input[type="submit"], input[type="reset"], input[type="button"] {
+			widows: 100%;
+			background: $secondary-color;
+			color: white;
+			font-size: inherit;
+			border-color: $secondary-color;
+			border-radius: 0;
+
+			&:hover, &:focus, &:active {
+				background: $secondary-color;
+				color: white;
+				border-color: $secondary-color;
+			}
+		}
+	}
+}
+
+#quicklink {
+	padding: 60px 0;
+	background-color: $secondary-color;
+
+	.links {
+		list-style: none;
+		margin: 0;
+
+		li {
+			margin: 0;
+			float: left;
+			width: 50%;
+			margin-bottom: 30px;
+			vertical-align: top;
+			text-align: center;
+
+			@media (#{$bp-larger-than-desktop}) {
+				width: 16.666%;
+				margin-bottom: 0;
+			}
+
+			a {
+				text-decoration: none;
+			}
+
+			.icon {
+				display: inline-block;
+				width: 140px;
+				height: 140px;
+				margin-bottom: 20px;
+				background-size: auto 78px;
+				background-repeat: no-repeat;
+				background-position: center;
+				border: 2px solid white;
+				border-radius: 50%;
+			}
+
+			h3, {
+				display: block;
+				font-size: 20px;
+				color: white;
+			}
+
+			.outline {
+				border: 2px solid white;
+				color: white;
+				padding: 7px 15px;
+				text-transform: uppercase;
+				display: inline-block;
+			}
+		}
+	}
+}
+
+/*============================
+=            HOME            =
+============================*/
+
+.home {
+
+	#primary {
+		text-align: center;
+		background-color: $light-grey;
+	}
+
+	#banner {
+		height: 100vh;
+
+		.blurb {
+			
+			.after {
+			}
+		}
+	}
+
+	#twitter {
+		text-align: center;
+		background-color: $light-grey;
+		padding: 0 0 60px 0;
+
+		h2 {
+			margin-bottom: 30px;
+			color: $primary-color;
+		}
+
+		.tweet {
+			padding: 0 20px;
+
+			@media (#{$bp-larger-than-phablet}) {
+				padding: 0 100px;
+			}
+		}
+
+		.slick-prev, 
+		.slick-next {
+			&:before {
+				display: none;
+			}
+
+			width: 30px;
+			height: 50px;
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+
+		.slick-prev {
+			background-image: url(assets/img/left-chevron.svg);
+		}
+
+		.slick-next {
+			background-image: url(assets/img/right-chevron.svg);
+		}
+	}
+
+	.menu-course-container {
+		padding-bottom: 60px;
+		border-bottom: 2px solid $primary-color;
+	}
+
+	#course-menu {
+		display: inline-block;
+		margin: 0;
+		list-style: none;
+
+		li {
+			display: inline-block;
+			margin: 0 10px;
+			margin-bottom: 10px;
+
+			@media (#{$bp-larger-than-phablet}) {
+				margin-bottom: 0;
+			}
+
+			a {
+				display: inline-block;
+				padding: 10px 40px;
+				text-transform: uppercase;
+				background-color: $secondary-color;
+				color: white;
+				text-decoration: none;
+			}
+
+			&:last-of-type {
+
+				a {
+					background-color: $primary-color;
+				}
+			}
+		}
+	}
+}
+
+/*============================
+=            MEMB            =
+============================*/
+
+.take-part {
+
+	.element {
+
+		h3 {
+			font-size: 24px;
+			margin: 20px 0;
+		}
+
+		.link {
+			margin-top: 20px;
+		}
+	}
+}
+
+/*============================
+=            MEMB            =
+============================*/
+
+.single-memberpressproduct {
+	
+	#banner {
+		height: 40vh;
+		background: url(assets/img/inner-bg.jpg);
+		background-size: cover;
+	}
+
+	.mepr-signup-form.mepr-form {
+		padding: 40px;
+		background: white;
+		margin: 40px 0 0 0;
+	}
+
+	.mp_wrapper .mepr_payment_method {
+		margin-bottom: 0 !important;
+	}
+
+	input.mepr-submit {
+		display: inline-block;
+		color: white;
+		background-color: #784987;
+		border-radius: 0px;
+		border: none;
+		font-size: inherit;
+
+		&:hover {
+			color: white;
+		}
+	}
+}
+
+/*============================
+=            PAGE            =
+============================*/
+
+.page {
+
+	#primary {
+		text-align: center;
+	}
+
+	.maincopy {
+		border-bottom: 2px solid $primary-color;
+		padding-bottom: 40px;
+		margin-bottom: 60px;
+
+		&.left {
+			text-align: left;
+		}
+	}
+
+	.sections {
+
+		ul {
+			margin-top: 20px;
+
+			 li {
+		 		margin-bottom: 1rem;
+				list-style-type: disc;
+				list-style-position: outside;
+				margin-left: 16px;
+			 }
+		}
+
+		.element {
+			text-align: left;
+
+			&:last-of-type {
+				margin-top: 30px;
+			}
+
+			@media (#{$bp-larger-than-tablet}) {
+				&:last-of-type {
+					margin-top: 0;
+				}
+			}
+
+			.link {
+				background: $primary-color;
+				display: block;
+				padding: 10px 15px;
+				text-decoration: none;
+				text-align: center;
+				text-transform: uppercase;
+				color: white;  
+			}
+		}
+	}
+
+	/*============================
+	=            TEAM            =
+	============================*/
+
+	&.our-team {
+
+		.sections {
+
+			&.support-staff {
+				background: $primary-color;
+				padding: 60px 0; 
+				color: white;
+				margin-top: 60px;
+
+				a {
+					color: inherit;
+				}
+
+				h1, h2, h3, h4, h5, p {
+					color: white;
+				}
+
+				.maincopy {
+					border-color: white;
+				}
+			}
+
+			&.additional-support {
+				padding: 60px 0; 
+
+				.maincopy {
+					border-color: $primary-color;
+				}
+			}
+		}
+
+		.element {
+
+			&.image {
+				display: none;
+
+				@media (#{$bp-larger-than-tablet}) {
+					display: block;
+				}
+			}
+
+			.avatar {
+				margin-bottom: 30px;
+
+				@media (#{$bp-larger-than-tablet}) {
+					display: none;
+				}
+			}
+
+			h2 {
+				font-size: 3.2rem;
+				margin-bottom: 0
+			}
+
+			h3 {
+				font-size: 1.6rem;
+				color: $secondary-color;
+				font-weight: 400;
+			}
+		}
+	}
+
+	/*===============================
+	=            COURSES            =
+	===============================*/
+
+	&.our-courses {
+
+		.element {
+
+			.text {
+				margin-top: 20px;
+
+				h1, h2, h3 {
+					font-size: 1.6em;
+				}
+			}
+		}
+
+	}
+
+	/*===========================================
+	=            ENROL / NEW STUDENT            =
+	===========================================*/
+
+	&.enrol, &.enroll, &.new-student {
+
+		.maincopy {
+			border-bottom: 0;
+			padding-bottom: 0px;
+			margin-bottom: 0px;
+		}
+
+		.ui-datepicker-title select {
+			margin-top: 2.5%;
+			height: auto;
+			padding: inherit;
+			background: inherit;
+			border-radius: 0;
+		}
+
+		.gform_wrapper {
+			background: white;
+			padding: 40px;
+			margin: 40px 0 0 0;
+
+			.gf_page_steps {
+				margin-bottom: 40px;
+				padding-bottom: 20px;
+			}
+
+			ul.gfield_checkbox, ul.gfield_radio {
+				margin: auto;
+				padding: 0;
+
+				li {
+					margin: 0;
+					line-height: 2;
+				}
+			}
+
+			.field_sublabel_below {
+
+				.ginput_complex.ginput_container {
+
+					label {
+						color: #ccc;
+					}
+				}
+			}
+
+			input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
+				font-size: inherit;
+				font-family: inherit;
+				padding: 7px 12px;
+				letter-spacing: normal;
+			}
+
+			input[type='email'], input[type='number'], input[type='search'], input[type='text'], input[type='tel'], input[type='url'], input[type='password'], textarea, select {
+				min-height: 38px;
+				padding: 7px 12px;
+				background-color: #fff;
+				border: 1px solid #cccccc;
+				border-radius: 0px;
+				box-shadow: none;
+				box-sizing: border-box;
+				height: auto;
+			}
+
+			select {
+				-webkit-appearance: none;
+				-moz-appearance: none;
+				appearance: none;
+				padding: 7px 12px;
+				background-color: #fff;
+				border: 1px solid #cccccc;
+				box-shadow: none;
+				box-sizing: border-box;
+				height: auto;
+				background-image: url(assets/img/down-chevron.svg);
+				background-position: 98% 50%;
+				background-repeat: no-repeat;
+				background-size: auto 20px;
+			}
+
+			ul {
+
+				li.gfield {
+					margin-top: 0;
+					padding-top: 0;
+					margin-bottom: 40px;
+				}
+			}
+
+			.top_label .gfield_label {
+				display: -moz-inline-stack;
+				display: inline-block;
+				line-height: 1;
+				clear: both;
+				margin-bottom: 15px;
+				border-bottom: 1px solid #eee;
+				display: block;
+				padding-bottom: 10px;
+				text-transform: uppercase;
+				font-family: $heading-font;
+				font-size: 17px;
+			}
+
+
+			.gform_page_footer {
+				margin: 20px 0 0 0;
+				padding: 40px 0 0 0;
+				width: 100%;
+				border-top: 1px dotted black;
+
+				input[type="submit"], input[type="reset"], input[type="button"] {
+					display: inline-block;
+					color: white;
+					background-color: #784987;
+					border-radius: 0px;
+					border: none;
+
+					&:hover {
+						color: white;
+					}
+
+					&.gform_previous_button {
+						
+					}
+
+					&.gform_next_button {
+
+					}
+				}
+			}
+
+			 &.gf_browser_chrome {
+			 	
+			 	.gfield_radio {
+			 		
+			 		li {
+
+			 			input[type=radio] {
+							margin-top: 0px;
+						}
+					}
+				}
+			}
+		}
+
+		.logmein {
+			float: left;
+			width: 100%;
+			margin-bottom: 20px;
+			
+			@media (#{$bp-larger-than-phablet}) {
+				margin-right: 2%;
+				margin-bottom: 0;
+				width: 48%;
+			}
+		}
+
+		h3.error {
+			color: red;
+			font-size: 18px;
+			margin-top: 10px;
+		}
+
+		.new-stu {
+			float: left;
+			width: 100%;
+		    background: $primary-color;
+			padding: 30px;
+			box-sizing: border-box;
+			color: white;
+			text-align: center;
+
+			@media (#{$bp-larger-than-phablet}) {
+				width: 48%;
+			}
+
+			h1, h2, h3, a {
+				color: white;
+			}
+
+			a {
+				display: block;
+				margin-top: 20px;
+				background: white;
+				color: black;
+				text-decoration: none;
+				font-weight: bolder;
+				text-transform: uppercase;
+				text-align: center;
+				padding: 10px;
+				line-height: 1;
+			}
+		}
+
+	}
+}
+
+/*===============================
+=            COURSES            =
+===============================*/
+
+.blog {
+
+	.page-title {
+		margin-bottom: 60px;
+	}
+
+	article {
+
+		h2 {
+			font-size: 1.6rem;
+			margin: 20px 0;
+
+			a {
+				color: black;
+				text-decoration: none;
+			}
+		}
+
+		.more {
+			text-transform: uppercase;
+			color: black;
+			text-decoration: none;
+			font-weight: 700;
+			margin-top: 15px;
+			display: block;
+		}
+	}
+
+	.posts-navigation {
+		h2 {
+			display: none;
+		}
+
+		.nav-previous {
+			float: left;
+		}
+		.nav-next {
+			float: right;
+
+			a {
+				background-color: $secondary-color;
+			}
+		}
+
+		a {
+			background-color: $primary-color;
+			color: white;
+			padding: 10px 24px;
+			text-transform: uppercase;
+			text-decoration: none;
+		}
+	}
+}
+
+.single {
+
+	.entry-header {
+		text-align: center;
+		margin-bottom: 40px;
+
+		h1, h2 {
+			margin-bottom: 0;
+		}
+	}
+
+	.post-thumbnail {
+		margin-bottom: 30px;
+	}
+
+	.post-navigation {
+		h2 {
+			display: none;
+		}
+
+		.nav-previous {
+			float: left;
+		}
+		.nav-next {
+			float: right;
+
+			a {
+				background-color: $secondary-color;
+				content: "Next Story";
+			}
+		}
+
+		a {
+			content: "Previous Story";
+			background-color: $primary-color;
+			color: white;
+			padding: 10px 24px;
+			text-transform: uppercase;
+			text-decoration: none;
+		}
+	}
+}
+
+/*===============================
+=            Contact            =
+===============================*/
+
+.contact {
+
+	.gform_wrapper {
+	    margin: 0;
+
+		ul {
+
+			.gfield {
+				margin-top: 0;
+				padding-top: 0;
+				margin-bottom: 15px;
+			}
+		}
+
+		.gform_page_footer {
+
+			input[type="submit"], input[type="reset"], input[type="button"] {
+				display: inline-block;
+				color: white;
+				background-color: #784987;
+				border-radius: 0px;
+				border: none;
+
+				&:hover {
+					color: white;
+				}
+			}
+		}
+	}
+}
+
+/*===============================
+=            Account            =
+===============================*/
+
+.account {
+
+	#banner {
+		text-align: center;
+
+		h1 {
+			margin-bottom: 5px;
+		}
+
+
+		h2 {
+			margin-bottom: 0;
+		}
+
+		.cell {
+			img {
+				display: inline-block;
+				margin-bottom: 10px;
+				border-radius: 50%;
+			}
+		}
+	}
+
+	#member-assets-form {
+
+		.index {
+			text-align: left;
+			background: white;
+			border: 1px solid #999;
+
+			dl {
+				margin: 0;
+				padding: 20px;
+				border-bottom: 1px solid #999; 
+
+				&:nth-child(2n) {
+					background: #f9f9f9;
+				}
+
+				&:last-of-type {
+					border-bottom: 0;
+				}
+
+				dt, dl {
+					width: 50%;
+					float: left;
+				}
+			}
+
+			ul {
+				list-style: none;
+				margin: 0;
+
+				li {
+					margin-bottom: 30px;
+
+					.icon, .name {
+						display: inline-block;
+						vertical-align: middle;
+					}
+
+					.icon {
+
+						a {
+							background-color: $secondary-color;
+							line-height: 1;
+							padding: 19px;
+							border-radius: 50%;
+							color: white;
+							display: block;
+							font-size: 32px;
+						}
+					}
+
+					.name {
+						padding-left: 40px;
+
+						a {
+							text-decoration: none;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#personal-information-form {
+	   
+	   .gform_wrapper {
+			background: white;
+			padding: 40px;
+			margin: 40px 0 0 0;
+
+			.gf_page_steps {
+				margin-bottom: 40px;
+				padding-bottom: 20px;
+			}
+
+			ul.gfield_checkbox, ul.gfield_radio {
+				margin: auto;
+				padding: 0;
+
+				li {
+					margin: 0;
+					line-height: 2;
+				}
+			}
+
+			.field_sublabel_below {
+
+				.ginput_complex.ginput_container {
+
+					label {
+						color: #ccc;
+					}
+				}
+			}
+
+			input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
+				font-size: inherit;
+				font-family: inherit;
+				padding: 7px 12px;
+				letter-spacing: normal;
+			}
+
+			input[type='email'], input[type='number'], input[type='search'], input[type='text'], input[type='tel'], input[type='url'], input[type='password'], textarea, select {
+				min-height: 38px;
+				padding: 7px 12px;
+				background-color: #fff;
+				border: 1px solid #cccccc;
+				border-radius: 0px;
+				box-shadow: none;
+				box-sizing: border-box;
+				height: auto;
+			}
+
+			select {
+				-webkit-appearance: none;
+				-moz-appearance: none;
+				appearance: none;
+				padding: 7px 12px;
+				background-color: #fff;
+				border: 1px solid #cccccc;
+				box-shadow: none;
+				box-sizing: border-box;
+				height: auto;
+				background-image: url(assets/img/down-chevron.svg);
+				background-position: 98% 50%;
+				background-repeat: no-repeat;
+				background-size: auto 20px;
+			}
+
+			ul {
+
+				li.gfield {
+					margin-top: 0;
+					padding-top: 0;
+					margin-bottom: 40px;
+				}
+			}
+
+			.top_label .gfield_label {
+				display: -moz-inline-stack;
+				display: inline-block;
+				line-height: 1;
+				clear: both;
+				margin-bottom: 15px;
+				border-bottom: 1px solid #eee;
+				display: block;
+				padding-bottom: 10px;
+				text-transform: uppercase;
+				font-family: $heading-font;
+				font-size: 17px;
+			}
+
+
+			.gform_page_footer {
+				margin: 20px 0 0 0;
+				padding: 40px 0 0 0;
+				width: 100%;
+				border-top: 1px dotted black;
+
+				input[type="submit"], input[type="reset"], input[type="button"] {
+					display: inline-block;
+					color: white;
+					background-color: #784987;
+					border-radius: 0px;
+					border: none;
+
+					&:hover {
+						color: white;
+					}
+
+					&.gform_previous_button {
+						
+					}
+
+					&.gform_next_button {
+
+					}
+				}
+			}
+
+			 &.gf_browser_chrome {
+			 	
+			 	.gfield_radio {
+			 		
+			 		li {
+
+			 			input[type=radio] {
+							margin-top: 0px;
+						}
+					}
+				}
+			}
+		}
+
+	}
+
+	.mepr-nav-item {
+		background: $primary-color;
+		margin: 0 3px;
+		display: inline-block;
+		line-height: 1;
+		padding: 0;
+
+		a {
+			text-decoration: none;
+			color: white;
+			text-transform: uppercase;
+			line-height: 1;
+			padding: 9px 15px;
+			display: block;
+			font-size: 14px;
+		}
+	}
+
+	.mepr-submit.mepr-share-button {
+		background: $primary-color;
+		color: white;
+		font-size: inherit;
+
+		&:hover {
+			color: white;
+		}
+	}
+
+	.mepr-account-change-password {
+		float: right;
+		line-height: 1;
+
+		a {
+			background: $secondary-color;
+			text-decoration: none;
+			color: white;
+			padding: 10px 14px;
+		}
+	}
+}
+
+
