@@ -9,162 +9,221 @@
 */
 
 #site-navigation {
+	width: 50vw;
+	height: 100vh;
+	position: fixed;
+	right: -50vw;
+	z-index: 999;
+	background: #e9e9e9;
+	top: 0;
 
-	.menu-primary-container {
-		display: none;
+	-webkit-transition: all .25s linear;
+	   -moz-transition: all .25s linear;
+	    -ms-transition: all .25s linear;
+	     -o-transition: all .25s linear;
+	        transition: all .25s linear;
 
-		ul {
-			list-style: none;
-			text-align: right;
-			margin-bottom: 0;
+	.menu-toggle {
+		left: 0;
+		padding: 0;
+		font-size: 20px;
+		line-height: 1;
+		transform: rotate(90deg);
+		transform-origin: top left;
+		top: 30%;
+		border: 0;
+		height: auto;
+		display: block;
+		border-radius: 0;
+		padding: 20px;
+		background: #e9e9e9;
+		position: absolute;
+		z-index: 999;
+	}
 
-			li {
-				display: inline-block;
-				margin-bottom: 0;
+	.menu-wrapper {
+		overflow: scroll;
+		width: 100%;
+		height: 100%;
+		display: block;
 
-				&:hover {
+		section {
+			display: table;
+			width: 100%;
+			box-sizing: border-box;
+			padding-left: $site-border;
+			padding-right: $site-border;
+			padding-top: $site-border;
+			padding-bottom: $site-border;
+		
+			&.heading {
+				padding-top: $site-borderx2;
+				padding-bottom: 0;
 
-					a {
-						background-color: $primary-color;
-						border-color: $primary-color !important;
-					}
-
-					.sub-menu {
-						background-color: $primary-color;
-					}
-				}
-
-				a {
-					text-decoration: none;
-					color: white;
-					font-family: $nav-font-family;
-					padding: 10px 15px;
-				}
-
-				&:last-of-type {
-					a {
-						text-transform: uppercase;
-						border: 1px solid white; 
-					}
+				h2 {
+					margin-bottom: 0;
 				}
 			}
 
-			.sub-menu {
-				position: absolute;
-				width: auto;
-				z-index: 1;
-				display: none;
-				margin: 0;
-				padding-top: 10px;
-				text-align: left;
+			&.signup-links {
+				padding-bottom: 0;
 
-				li {
-					display: block;
+				ul {
+					list-style: none;
+					text-align: left;
+					margin-bottom: 0;
+					display: table;
+					width: 100%;
 
-					a {
-						display: block;
-					}
+					li {
+						float: left;
+						width: 50%;
+						margin-bottom: 0;
 
-					&:last-of-type {
 						a {
-							text-transform: capitalize;
-							border: none; 
+							display: block;
+							width: 95%;
+							padding: 20px;
+							background-color: $primary-color;
+							box-sizing: border-box;
+							color: white;
+							text-transform: uppercase;;
+							text-decoration: none;
+						}
+
+						&:last-of-type {
+
+							a {
+								background-color: $secondary-color;
+							}
 						}
 					}
 				}
 			}
-		}
-	}
 
-	.hamburger {
-		padding: 0;
-		border-radius: 0;
-		height: inherit;
-		position: absolute;
-		right: 0;
-		bottom: 30px;
-		z-index: 99;
+			&.contact-info {
+				background-color: $primary-color;
+				color: white;
 
-		.hamburger-box {
-			display: block;
-		}
-	}
-
-	@media (#{$bp-larger-than-desktophd}) {
-		.menu-toggle {
-			display: none;
-		}
-
-		.menu-primary-container {
-			display: block;
-		}
-	}
-
-	&.toggled {
-		.hamburger {
-			bottom: 36px;
-
-			.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-				background-color: white;
+				h1, h2, h3, p, a {
+					color: inherit;
+				}
 			}
-		}
 
-		.menu-primary-container {
-			position: fixed;
-			top: 0;
-			left: 0;
-			display: table;
-			width: 100vw;
-			height: 100vh;
-			background: rgba($primary-color,0.9);
+			&.signup {
+				background-color: $secondary-color;
+				color: white;
 
-			#primary-menu {
-				display: table-cell;
-				width: 100%;
-				height: 100%;
-				vertical-align: middle;
-				text-align: center;
+				h1, h2, h3, p, a {
+					color: inherit;
+				}
+			}
 
-				li {
-				 	display: block;
-					line-height: 3;
-					max-width: 320px;
-					margin: 0 auto;
+			&.map {
+				margin: 0;
+				padding: 0;
+				height: auto;
 
-					&:hover {
+				iframe {
+					width: 100%;
+					// height: auto;
+				}
+			}
 
-						a {
-							background-color: $secondary-color;
-							border-color: $secondary-color !important;
-							color: white;
+			&.nav-links {
+
+				.menu-primary-container {
+
+					ul {
+						list-style: none;
+						text-align: left;
+						margin-bottom: 0;
+
+						li {
+							float: left;
+							width: 50%;
+
+							&:before {
+								content: '';
+								width: 75px;
+								height: 10px;
+								background-color: #fff;
+								display: block;
+								margin-bottom: 10px;
+							}
+
+							&.whats-on {
+								&:before {
+									background-color: $teal;
+								}
+							}
+							&.collections {
+								&:before {
+									background-color: $olive;
+								}
+							}
+							&.hospitality {
+								&:before {
+									background-color: $brown;
+								}
+							}
+							&.lerning {
+								&:before {
+									background-color: $orange;
+								}
+							}
+							&.support-us {
+								&:before {
+									background-color: $blue;
+								}
+							}
+							&.make-visit {
+								&:before {
+									background-color: $purple;
+								}
+							}
+
+							&:hover {
+
+								a {
+								}
+
+								.sub-menu {
+								}
+							}
+
+							a {
+								display: block;
+								text-decoration: none;
+								text-transform: uppercase;
+							}
+
+							&:last-of-type {
+								a {
+								}
+							}
 						}
 
 						.sub-menu {
-							background-color: $secondary-color;
-						}
-					}
+							position: relative;
+							margin: 0;
 
-					a {
-						color: white;
-						border-color: white;
-						-webkit-transition: all .25s linear;
-					       -moz-transition: all .25s linear;
-					        -ms-transition: all .25s linear;
-					         -o-transition: all .25s linear;
-					            transition: all .25s linear;
-					}
+							li {
+								width: 100%;
+								display: block;
 
-					.sub-menu {
-						position: relative;
-						text-align: center;
-						padding: 0;
-						margin: 0;
+								&:before {
+									display: none;
+								}
 
-						li {
-							line-height: 1.5;
+								a {
+									text-transform: none;
+								}
 
-							a {
-								color: white;
+								&:last-of-type {
+									a {
+									}
+								}
 							}
 						}
 					}
@@ -173,4 +232,37 @@
 		}
 	}
 
+	&.toggled {
+		right: 0;
+
+		.menu-primary-container {
+
+			#primary-menu {
+
+				li {
+
+					&:hover {
+
+						a {
+						}
+
+						.sub-menu {
+						}
+					}
+
+					a {
+					}
+
+					.sub-menu {
+
+						li {
+
+							a {
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }

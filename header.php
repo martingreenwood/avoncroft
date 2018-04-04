@@ -23,6 +23,8 @@
 <body <?php body_class($pagename); ?>>
 <div id="page" class="site">
 
+	<div class="box-top"></div>
+
 	<header id="masthead" class="site-header">
 		<div class="container">
 			<div class="row">
@@ -36,62 +38,55 @@
 						?>
 					</div>
 				</div>
-
-				<nav id="site-navigation" class="main-navigation">
-					<button class="hamburger menu-toggle hamburger--spin" type="button" aria-controls="primary-menu" aria-expanded="false">
-						<span class="hamburger-box ">
-							<span class="hamburger-inner"></span>
-						</span>
-					</button>
-					<?php
-						wp_nav_menu( array(
-							'theme_location' => 'menu-1',
-							'menu_id'        => 'primary-menu',
-						) );
-					?>
-				</nav>
 			
 			</div>
 		</div>
 	</header>
 
-	<?php $bannerimage = get_field( 'banner_image' ); if (!$bannerimage): $bannerimage = get_template_directory_uri() . '/assets/img/inner-img.png'; else: $bannerimage = $bannerimage['url']; endif; ?>
-	<section id="banner" class="parallax-window" data-parallax="scroll" data-bleed="50" data-image-src="<?php echo $bannerimage; ?>">
-		<div class="blurb">
+	<nav id="site-navigation" class="main-navigation">
 
-			<div class="table">
-				<div class="cell middle">
+		<button class="menu-toggle" type="button" aria-controls="primary-menu" aria-expanded="false">MENU</button>
+		<div class="menu-wrapper">
 
-				<?php if (is_page(get_option( 'page_for_posts' ))): ?>
-					
+			<div class="menu-items">
 
-					<?php if (get_field( 'banner_text', get_option( 'page_for_posts' ) )): ?>
-					<h2><?php the_field( 'banner_text', get_option( 'page_for_posts' ) ); ?></h2>
-					<?php endif; ?>
-					<?php if (get_field( 'banner_link', get_option( 'page_for_posts' ) )): ?>
-					<a href="<?php the_field( 'banner_link', get_option( 'page_for_posts' ) ); ?>" title="Find out more">Find out more</a>
-					<?php endif; ?>
+				<section class="heading">
+					<h2>MENU</h2>
+				</section>
 
-				<?php elseif ( is_404() ): ?>
+				<section class="signup-links">
+					<ul>
+						<li><a href="<?php echo home_url( '/tickets' ); ?>" title="">Tickets</a></li>
+						<li><a href="<?php echo home_url( '/memberships' ); ?>" title="">Memberships</a></li>
+					</ul>
+				</section>
 
-					<h1>404</h1>
-					<h2>Page Not Found</h2>
+				<section class="nav-links">
+				<?php
+					wp_nav_menu( array(
+						'theme_location' => 'menu-1',
+						'menu_id'        => 'primary-menu',
+					) );
+				?>
+				</section>
 
-				<?php else: ?>
+				<section class="contact-info">
+					<h3>Contact Us</h3>
+					<p>Avoncroft Museum of Historic Buildings, Stoke Heath, Bromsgrove, Worcestershire, B60 4JR</p>
+					<p>Tel: 01527 831363 / 831886</p>
+				</section>
 
-					<?php if (get_field( 'banner_text' )): ?>
-					<h2><?php the_field( 'banner_text' ); ?></h2>
-					<?php endif; ?>
-					<?php if (get_field( 'banner_link' )): ?>
-					<a href="<?php the_field( 'banner_link' ); ?>" title="Find out more">Find out more</a>
-					<?php endif; ?>
+				<section class="map">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9756.435488078714!2d-2.0707798!3d52.3140269!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf86dc8232d01dc00!2sAvoncroft+Museum+of+Historic+Buildings!5e0!3m2!1sen!2suk!4v1522322963954" width="600" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+				</section>
 
-				<?php endif ?>
-					
-				</div>
+				<section class="signup">
+					<h3>RECEIVE OUR NEWSLETTER</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+				</section>
+				
 			</div>
 
-		</div>
-	</section>
+	</nav>
 
 	<div id="content" class="site-content">

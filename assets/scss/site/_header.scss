@@ -49,133 +49,88 @@
 	}
 }
 
-
-#masthead {
+.box-top {
+	width: 100%;
+	height: $site-border;
 	position: fixed;
+	z-index: 1;
+	box-sizing: border-box;
 	left: 0;
-	right: 0;
 	top: 0;
-	z-index: 51;
-	height: 234px;
-	background-color: transparent;
+	background-color: $light-grey;
+}
 
-	-webkit-transition: top .5s linear 0s, background 0.5s linear 0s;
-	-moz-transition: top .5s linear 0s, background 0.5s linear 0s;
-	-ms-transition: top .5s linear 0s, background 0.5s linear 0s;
-	-o-transition: top .5s linear 0s, background 0.5s linear 0s;
-	transition: top .5s linear 0s, background 0.5s linear 0s;
-
-	.logo {
-		&.small {
-			display: none;
-		}
-		&.desktop {
-			display: block;
-		}
-	}
-
-	&.hidden {
-		top: -234px;
-		-webkit-transition: top .5s linear 0s, background 0.5s linear 0s;
-		-moz-transition: top .5s linear 0s, background 0.5s linear 0s;
-		-ms-transition: top .5s linear 0s, background 0.5s linear 0s;
-		-o-transition: top .5s linear 0s, background 0.5s linear 0s;
-		transition: top .5s linear 0s, background 0.5s linear 0s;
-	}
-
-	&.fixed {
-		position: fixed;
-		top: 0px;
-		background-color: #fff;
-		z-index: 102;
-		height: 96px;
-
-		.toggled {
-			.hamburger {
-
-				.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-					background-color: white;
-				}
-			}
-		}
-
-		.menu-primary-container {
-
-			ul {
-
-				li {
-
-					&:hover {
-
-						a {
-							background-color: transparent;
-							border-color: black !important;
-						}
-
-						.sub-menu {
-							background-color: white;
-						}
-					}
-
-					a {
-						color: black;
-						border-color: black;
-					}
-
-					ul {
-						background: white;
-					}
-				}
-			}
-		}
-
-		.logo {
-			&.small {
-				display: block;
-			}
-			&.desktop {
-				display: none;
-			}
-		}
-
-		.row {
-			.main-navigation {
-				margin-top: 7px;
-			}
-
-			.hamburger {
-				margin-top: 8px;
-			}
-
-			.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-				background-color: black;
-			}
-		}
-	}
+#masthead {	
+	position: absolute;
+	top: $site-border;
+	width: 100%;
 
 	.row {
-		padding: 30px 0;
 
 		.site-branding {
 			float: left;
 			width: 235px;
 		}
-
-		.main-navigation {
-			float: right;
-			margin-top: 120px;
-		}
 	}
 }
 
 #banner {
-    // min-height: 800px;
-    height: 100vh;
+	margin-top: $site-border;
+    height: 50vh;
     background: transparent;
 	position: relative;
 
-	@media (#{$bp-larger-than-tablet}) {
-		height: 60vh;
+	.home-links {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		color: white;
+
+		a {
+			color: inherit;
+		}
+
+		.open-times {
+			float: left;
+			padding: 20px 0;
+
+			.heading {
+				float: left;
+				margin-right: 10px;
+
+				svg, img {
+					display: block;
+					width: 24px;
+
+					g {
+						fill: $teal;
+					}
+				}
+			}
+
+			p {
+				float: left;
+
+				span {
+					letter-spacing: $spaced;
+					font-size: 20px;
+				}
+			}
+		}
+
+		.tickets {
+			float: right;
+
+			a {
+				background: $teal;
+				text-decoration: none;
+				text-transform: uppercase;
+				padding: 26px 35px;
+				font-size: 30px;
+				letter-spacing: $spaced;
+				display: block;
+			}
+		}
 	}
 
 	.blurb {
@@ -184,27 +139,12 @@
 		height: 100%;
 		top: 0;
 		left: 0;
-		text-align: center;
-
-		.before {
-			width: 100%;
-			position: absolute;
-			top: 0;
-			left: 0;
-			z-index: 1;
-		}
-
-		.after {
-			width: 100%;
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			z-index: 1;
-		}
+		color: white;
 
 		h1, h2, h3, h4 {
 			color: white;
-			margin-bottom: 60px;
+			margin-bottom: 0;
+			font-family: $base-font;
 		}
 
 		br {
@@ -215,17 +155,32 @@
 			}
 		}
 
-		h2 {
-			padding: 0 30px;
+		h1, h2 {
+			margin-bottom: 25px;
+
+		}
+
+		h3 {
+			font-size: 1.6rem;
+			margin-bottom: 10px;
+		}
+
+		p {
+			font-family: $serif-font;
+			font-weight: 300;
+			font-style: italic;
+			letter-spacing: 1px;
 		}
 
 		a {
+			margin-top: 25px;
 			padding: 10px 40px;
 			text-decoration: none;
 			border: 1px solid white;
 			text-transform: uppercase;
 			color: white;
 			display: inline-block;
+			letter-spacing: $spaced;
 
 			-webkit-transition: all .25s linear;
 			   -moz-transition: all .25s linear;

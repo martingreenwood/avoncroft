@@ -9,12 +9,35 @@
 	],
 "creatorBuild": "26330",
 "files": {
+	"\/.gitattributes": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/.gitattributes",
+		"oF": 0
+		},
 	"\/404.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/404.php",
 		"oF": 0
+		},
+	"\/acf-json\/group_5abd021a9a5c2.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/acf-json\/group_5abd021a9a5c2-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/acf-json\/group_5abd0424b188e.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/acf-json\/group_5abd0424b188e-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
 		},
 	"\/archive.php": {
 		"cB": 0,
@@ -23,11 +46,210 @@
 		"oAP": "\/archive.php",
 		"oF": 0
 		},
+	"\/assets\/fonts\/GillSans-Bold.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/assets\/fonts\/GillSans-Bold.ttf",
+		"oF": 0
+		},
+	"\/assets\/fonts\/GillSans-Bold.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/assets\/fonts\/GillSans-Bold.woff",
+		"oF": 0
+		},
+	"\/assets\/fonts\/GillSans-Bold.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/assets\/fonts\/GillSans-Bold.woff2",
+		"oF": 0
+		},
+	"\/assets\/fonts\/GillSans-BoldItalic.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/assets\/fonts\/GillSans-BoldItalic.ttf",
+		"oF": 0
+		},
+	"\/assets\/fonts\/GillSans-BoldItalic.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/assets\/fonts\/GillSans-BoldItalic.woff",
+		"oF": 0
+		},
+	"\/assets\/fonts\/GillSans-BoldItalic.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/assets\/fonts\/GillSans-BoldItalic.woff2",
+		"oF": 0
+		},
+	"\/assets\/fonts\/GillSans-Italic.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/assets\/fonts\/GillSans-Italic.ttf",
+		"oF": 0
+		},
+	"\/assets\/fonts\/GillSans-Italic.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/assets\/fonts\/GillSans-Italic.woff",
+		"oF": 0
+		},
+	"\/assets\/fonts\/GillSans-Italic.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/assets\/fonts\/GillSans-Italic.woff2",
+		"oF": 0
+		},
+	"\/assets\/fonts\/GillSans-Light.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/assets\/fonts\/GillSans-Light.ttf",
+		"oF": 0
+		},
+	"\/assets\/fonts\/GillSans-Light.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/assets\/fonts\/GillSans-Light.woff",
+		"oF": 0
+		},
+	"\/assets\/fonts\/GillSans-Light.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/assets\/fonts\/GillSans-Light.woff2",
+		"oF": 0
+		},
+	"\/assets\/fonts\/GillSans-LightItalic.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/assets\/fonts\/GillSans-LightItalic.ttf",
+		"oF": 0
+		},
+	"\/assets\/fonts\/GillSans-LightItalic.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/assets\/fonts\/GillSans-LightItalic.woff",
+		"oF": 0
+		},
+	"\/assets\/fonts\/GillSans-LightItalic.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/assets\/fonts\/GillSans-LightItalic.woff2",
+		"oF": 0
+		},
+	"\/assets\/fonts\/GillSans.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/assets\/fonts\/GillSans.ttf",
+		"oF": 0
+		},
+	"\/assets\/fonts\/GillSans.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/assets\/fonts\/GillSans.woff",
+		"oF": 0
+		},
+	"\/assets\/fonts\/GillSans.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/assets\/fonts\/GillSans.woff2",
+		"oF": 0
+		},
+	"\/assets\/img\/chevron-right.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/assets\/img\/chevron-right.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/assets\/img\/clock.png": {
+		"ft": 32768,
+		"iS": 3628,
+		"oA": 0,
+		"oAP": "\/assets\/img\/clock.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/img\/clock.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/assets\/img\/clock.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/assets\/img\/hompage-bg.jpg": {
+		"ft": 16384,
+		"iS": 933695,
+		"oA": 0,
+		"oAP": "\/assets\/img\/hompage-bg.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"\/assets\/img\/inner-img.png": {
 		"ft": 32768,
 		"iS": 228884,
 		"oA": 0,
 		"oAP": "\/assets\/img\/inner-img.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/img\/logow.png": {
+		"ft": 32768,
+		"iS": 3831,
+		"oA": 0,
+		"oAP": "\/assets\/img\/logow.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/img\/logow.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/assets\/img\/logow.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/assets\/img\/news.png": {
+		"ft": 32768,
+		"iS": 623541,
+		"oA": 0,
+		"oAP": "\/assets\/img\/news.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -1043,6 +1265,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/page.php",
+		"oF": 0
+		},
+	"\/partial\/banner-section.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/partial\/banner-section.php",
 		"oF": 0
 		},
 	"\/README.md": {
