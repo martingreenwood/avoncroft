@@ -3,6 +3,25 @@
     "title": "Page Banner",
     "fields": [
         {
+            "key": "field_5ae1a49d4194a",
+            "label": "Video",
+            "name": "video",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
             "key": "field_5abd0223e6f75",
             "label": "Image",
             "name": "image",
@@ -122,5 +141,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1522747440
+    "modified": 1524737551
 }

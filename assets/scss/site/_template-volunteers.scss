@@ -1,0 +1,209 @@
+/*
+* Skeleton V2.0.4
+* Copyright 2014, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 12/9/2014
+* Sass Version by Seth Coelen https://github.com/whatsnewsaes
+*/
+
+.page-template-template-volunteering {
+
+	.the-volunteers {
+		margin-bottom: $site-border;
+
+		.row {
+			direction: ltr;
+
+			&:nth-child(even) {
+				direction: rtl;
+
+				* {
+					direction: ltr;
+				}
+			}
+		}
+
+		.element {
+			margin: 0;
+			vertical-align: middle;
+			display: inline-block;
+			float: none;
+			clear: none;
+		}
+
+		.six {
+			width: 49.7752%;
+		}
+
+		.text {
+			background: white;
+			padding: 140px;
+			box-sizing: border-box;
+			height: calc(100% - 90px);
+
+			h1, h3, h3 {
+				text-transform: uppercase;
+			}
+
+			h4 {
+				color: $teal;
+				font-size: 1.8rem;
+				text-transform: uppercase;
+			}
+
+			.more {
+				display: block;
+				background-color: $teal;
+				color: white;
+				padding: 10px 20px;
+				text-decoration: none;
+				text-transform: uppercase;
+				margin-top: 20px;
+			}
+		}
+
+		.image {
+			z-index: 1;
+
+			img {
+				width: 100%;
+			}
+		}
+
+		.row {
+
+			&:nth-child(odd) {
+
+				.image {
+					position: relative;
+
+					img {
+						width: calc(100% + 45px);
+						margin-left: 45px;
+					}
+				}
+
+				.text {
+					// padding-left: $site-borderx2;
+				}
+			}
+
+			&:nth-child(even) {
+
+				.image {
+					position: relative;
+
+					img {
+						width: calc(100% + 45px);
+						margin-left: -90px;
+					}
+				}
+			}
+		}
+
+	}
+}
+
+
+.single-volunteer_opp {
+
+	.entry-content {
+		float: left;
+		width: 60%;
+		background: white;
+		padding: 45px;
+		margin-left: -45px;
+		margin-top: 0;
+		box-sizing: border-box;
+
+		.volunteer-opp-info {
+			background: #f9f9f9;
+			padding: 45px;
+			margin-bottom: 45px;
+			
+			span {
+				margin-bottom: 5px;
+				padding: 0;
+
+				strong {
+					font-family: $bold-font;
+				}
+			}
+		}
+	}
+
+	.padd-right {
+
+		.entry-content {
+			padding-right: 135px;
+		}
+	}
+
+	.feat-img {
+		position: relative;
+		margin: 0;
+		float: right;
+		margin-top: 135px;
+		margin-bottom: $site-border;
+		z-index: 0;
+		width: 40%;
+		box-sizing: border-box;
+
+		img {
+			width: calc(100% + 90px);
+			margin-left: -90px;
+		}
+	}
+
+	.volunteer-form {
+		float: left;
+		width: calc(60% - 135px);
+		background: $teal;
+		padding: 45px;
+		margin-top: 45px;
+		margin-bottom: 45px;
+		box-sizing: border-box;
+
+		h3 {
+			color: white;
+			font-size: 2.3rem;
+			margin-bottom: 20px;
+			text-transform: uppercase;;
+		}
+
+		#wivm-sign-up-form {
+
+			label {
+				margin: 0;
+				display: block;
+				color: white;
+				text-transform: uppercase;
+				letter-spacing: 3px;
+			}
+
+			input[type=text], input[type=email] {
+				display: block;
+				width: 100%;
+				border: 0;
+				border-radius: 0;
+				margin-bottom: 20px;
+			}
+
+			input[type=submit] {
+				margin-top: 0;
+				float: right;
+				border-radius: 0;
+				background: purple;
+				border: 0;
+				color: white;
+				line-height: inherit;
+				height: auto;
+				padding: 10px 20px;
+				font-size: inherit;
+				letter-spacing: 3px;
+			}
+		}
+	}
+}

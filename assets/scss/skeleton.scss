@@ -31,4 +31,14 @@ Text Domain: avoncroft
 @import "site/nav";
 @import "site/header";
 @import "site/content";
+@import "site/events";
+@import "site/product";
 @import "site/footer";
+
+
+/* Templates */
+@import "site/template-one";
+@import "site/template-three";
+@import "site/template-collections";
+@import "site/template-landing";
+@import "site/template-volunteers";

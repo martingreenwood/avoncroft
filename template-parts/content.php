@@ -24,6 +24,7 @@
 	</header>
 
 	<div class="entry-content">
+		
 		<?php 
 		/**
 		* Custom Excerpt Length WordPress using wp_trim_excerpt()
@@ -33,7 +34,7 @@
 		$content = get_the_content();
 		echo wp_trim_words( $content , '20' ); 
 		?>
-		<a class="more" href="<?php the_permalink( ) ?>" title="Read More">Read More</a>
+		
 	</div>
 
 </article><!-- #post-<?php the_ID(); ?> -->

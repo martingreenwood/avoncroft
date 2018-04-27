@@ -1,0 +1,43 @@
+{
+    "key": "group_5acb268dcfb22",
+    "title": "Download",
+    "fields": [
+        {
+            "key": "field_5acb2696f56d1",
+            "label": "Downloadable",
+            "name": "downloadable",
+            "type": "file",
+            "instructions": "Add a downloadable file to this page",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1523263165
+}

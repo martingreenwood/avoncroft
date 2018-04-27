@@ -45,13 +45,24 @@
 
 	<nav id="site-navigation" class="main-navigation">
 
-		<button class="menu-toggle" type="button" aria-controls="primary-menu" aria-expanded="false">MENU</button>
+		<div class="menu_buttons">
+			<button class="menu-toggle" type="button" aria-controls="primary-menu" aria-expanded="false">MENU</button>
+			<div class="the-basket">
+				<a class="" href="<?php echo esc_url(wc_get_cart_url()); ?>" title="<?php _e('View your basket', 'woothemes'); ?>">
+					<i class="fas fa-shopping-basket"></i>
+				</a>
+			</div>
+		</div>
+
 		<div class="menu-wrapper">
 
 			<div class="menu-items">
 
 				<section class="heading">
 					<h2>MENU</h2>
+					<div class="basket">
+						<a class="cart-customlocation" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>">Basket: <?php echo sprintf ( _n( '%d item', '%d items', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?> - <?php echo WC()->cart->get_cart_total(); ?></a>
+					</div>
 				</section>
 
 				<section class="signup-links">
@@ -71,13 +82,14 @@
 				</section>
 
 				<section class="contact-info">
-					<h3>Contact Us</h3>
+					<h3><a href="<?php echo home_url( '/contact-us' ); ?>" title="">CONTACT US</a></h3>
 					<p>Avoncroft Museum of Historic Buildings, Stoke Heath, Bromsgrove, Worcestershire, B60 4JR</p>
 					<p>Tel: 01527 831363 / 831886</p>
 				</section>
 
-				<section class="map">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9756.435488078714!2d-2.0707798!3d52.3140269!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf86dc8232d01dc00!2sAvoncroft+Museum+of+Historic+Buildings!5e0!3m2!1sen!2suk!4v1522322963954" width="600" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+				<?php $location = get_field('location', 'options'); ?>
+				<section class="map2">
+					<div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>"></div>
 				</section>
 
 				<section class="signup">

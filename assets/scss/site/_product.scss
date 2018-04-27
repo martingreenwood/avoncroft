@@ -1,0 +1,177 @@
+/*
+* Skeleton V2.0.4
+* Copyright 2014, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 12/9/2014
+* Sass Version by Seth Coelen https://github.com/whatsnewsaes
+*/
+
+
+.single-product.woocommerce {
+
+	input#submit.alt.disabled, 
+	input#submit.alt.disabled:hover, 
+	input#submit.alt:disabled, 
+	input#submit.alt:disabled:hover, 
+	input#submit.alt:disabled[disabled], 
+	input#submit.alt:disabled[disabled]:hover, 
+	a.button.alt.disabled, 
+	a.button.alt.disabled:hover, 
+	a.button.alt:disabled, 
+	a.button.alt:disabled:hover, 
+	a.button.alt:disabled[disabled], 
+	a.button.alt:disabled[disabled]:hover, 
+	button.button.alt.disabled, 
+	button.button.alt.disabled:hover, 
+	button.button.alt:disabled, 
+	button.button.alt:disabled:hover, 
+	button.button.alt:disabled[disabled], 
+	button.button.alt:disabled[disabled]:hover, 
+	input.button.alt.disabled, 
+	input.button.alt.disabled:hover, 
+	input.button.alt:disabled, 
+	input.button.alt:disabled:hover, 
+	input.button.alt:disabled[disabled], 
+	input.button.alt:disabled[disabled]:hover {
+		background-color: $dark-grey;
+		color: #fff;
+	}
+
+
+	input#submit.alt, 
+	.woocommerce a.button.alt, 
+	.woocommerce button.button.alt, 
+	.woocommerce input.button.alt 
+	{
+		background-color: $dark-grey;
+		color: #fff;
+
+		&:hover {
+			background-color: $purple;
+			color: #fff;
+		}
+	}
+
+	#content {
+
+		.product {
+
+			.summary {
+				float: left;
+				width: 60%;
+				clear: none;
+				padding: 45px;
+				padding-right: 90px;
+				background: white;
+				margin-top: -45px;
+				margin-left: -45px;
+				box-sizing: border-box;
+			}
+
+			.price {
+				color: white;
+				font-size: 3rem;
+				margin-bottom: 20px;
+			}
+
+			.form-wrapper {
+				float: left;
+				background: $teal;
+				padding: 45px;
+				margin-bottom: 45px;
+				color: white;
+				width: calc(60% - 125px);
+				box-sizing: border-box;
+
+				.cart {
+					margin-bottom: 0;
+
+					label {
+						font-weight: 700;
+						text-transform: uppercase;
+						padding: 0;
+						margin: 0;
+						height: 38px;
+						vertical-align: middle;
+					}
+
+					select {
+						max-width: 100%;
+						min-width: 75%;
+						display: block;
+						margin-right: 0;
+						width: 100%;
+						border: 0;
+						height: 38px;
+						border-radius: 0;
+						-webkit-appearance: none;
+						background-image: url(assets/img/chevron-donw.svg);
+						background-repeat: no-repeat;
+						background-position: 98% 50%;
+						background-size: 28px;
+						color: $dark-grey;
+						line-height: 38px;
+						padding: 0 44px 0 10px;
+					}
+
+					.woocommerce-variation-price {
+						margin-bottom: 20px;
+					}
+
+					.quantity {
+						float: left;
+						margin: 0 13px 0 0;
+						padding: 0 19px 0 0;
+
+						.minus, .plus {
+							border-radius: 0;
+							padding: 2px;
+							margin: 0;
+							width: auto;
+							height: auto;
+							border: 0;
+							width: 15px;
+							background: white;
+							color: $dark-grey;
+						}
+					}
+
+					.qty {
+						color: $dark-grey;
+						margin: 0;
+						border: 0;
+					}
+				}
+			}
+
+			.images {
+				float: right;
+				width: 40%;
+				position: relative;
+				margin: 45px 0;
+
+				img {
+					display: block;
+					width: calc(100% + 90px);
+					height: auto;
+					margin-left: -90px;
+					-webkit-box-shadow: none;
+					box-shadow: none;
+					max-width: unset;
+				}
+			}
+		}
+	}
+}
+
+.product-type-variable {
+
+	.woocommerce {
+
+		.price {
+			display: none;
+		}
+	}
+}

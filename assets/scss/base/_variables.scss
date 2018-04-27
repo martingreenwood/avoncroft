@@ -15,8 +15,8 @@ $light-grey: #e9e9e9 !default;
 $dark-grey: #3d3d3d !default;
 $dark-blue: #39464e !default;
 $alt-blue: #00395a !default;
-$primary-color: #4a3c77 !default;
-$secondary-color: #784987 !default;
+$primary-color: $dark-blue !default;
+$secondary-color: $alt-blue !default;
 $border-color: #eee !default;
 $link-color: $primary-color !default;
 $font-color: $dark-grey !default;
@@ -31,7 +31,7 @@ $blue: #2bbed8 !default;
 // Typography
 
 $base-font: "Gill Sans", Helvetica, Arial, sans-serif !default;
-$heading-font: "Gill Sans Bold", Helvetica, Arial, sans-serif !default;
+$heading-font: "Gill Sans", Helvetica, Arial, sans-serif !default;
 $bold-font: "Gill Sans Bold", Helvetica, Arial, sans-serif !default;
 $slanty-font: "Gill Sans Italic", Helvetica, Arial, sans-serif !default;
 $serif-font: 'IBM Plex Serif', Georgia, serif !default;
@@ -40,7 +40,7 @@ $font-family: $base-font !default;
 $heading-font-family: $heading-font !default;
 $nav-font-family: $heading-font !default;
 $bold-font-family: $heading-font !default;
-$slanty-font-family: $heading-font !default;
+$slanty-font-family: $slanty-font !default;
 
 //Grid Variables
 $container-width: 1200px !default;
@@ -54,5 +54,10 @@ $column-margin: 4% !default; // space between columns
 $global-radius: 4px !default;
 $site-border: 45px !default;
 $site-borderx2: 90px !default;
+$site-borderx3: 135px !default;
+$site-borderx4: 180px !default;
 
 $spaced: 5px !default;
+
+
+$randomNumber: random(30) + %;

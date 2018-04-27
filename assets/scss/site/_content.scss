@@ -8,16 +8,21 @@
 * Sass Version by Seth Coelen https://github.com/whatsnewsaes
 */
 
-.map {
+.map, .map2 {
 	width: 100%;
 	height: 400px;
-	border: #ccc solid 1px;
-	margin: 20px 0;
+	border: #fff solid $site-border;
+	margin-bottom: $site-border;
 
 	/* fixes potential theme css conflict */
 	img {
 	   max-width: inherit !important;
 	}
+}
+
+.map2 {
+	border: 0;
+	margin: 0;
 }
 
 #page {
@@ -26,7 +31,7 @@
 }
 
 #primary {
-	background-color: $light-grey;
+	// background-color: $light-grey;
 }
 
 .offsetleft {
@@ -56,7 +61,8 @@ img {
 	#rowone {
 
 		.featurepage {
-			margin-top: 70px;
+			margin-top: $site-border;
+			margin-bottom: $site-border;
 			position: relative;
 
 			img {
@@ -68,6 +74,7 @@ img {
 				bottom: -$site-border;
 				background: white;
 				max-width: 70%;
+				
 
 				a {
 					padding: 20px;
@@ -111,8 +118,10 @@ img {
 		.events {
 			float: right;
 			background-color: $dark-blue;
-			padding: 70px 35px 35px 35px;
+			padding: $site-border $site-border $site-border $site-border;
 			color: white;
+			position: relative;
+			z-index: 1;
 
 			h1, h2, h3, a {
 				color: inherit;
@@ -125,47 +134,125 @@ img {
 				font-family: $base-font;
 				font-size: 4rem;
 				letter-spacing: $spaced;
-				margin-bottom: 25px;
+				margin-bottom: $site-border;
 			}
 
-			.event-list {
+			.events-link {
+				display: inline-block;
+				width: 100%;
 
-				.tribe-events-widget-link {
-
-					a {
-						background-color: $teal;
-						padding: 20px;
-						display: block;
-					}
+				a {
+					background-color: $teal;
+					padding: 20px;
+					display: block;
 				}
+			}
 
-				.type-tribe_events {
-					margin-bottom: 25px;
-					padding-bottom: 25px;
+			// .event-list {
+
+			// 	.tc-single-event {
+			// 		margin-bottom: 35px;
+			// 		padding-bottom: 35px;
+			// 		border-bottom: 1px solid white;
+
+			// 		&:last-of-type {
+			// 			margin-bottom: 70px;
+			// 			border-bottom: 0;
+			// 			padding-bottom: 0;
+			// 		}
+
+			// 		.icon {
+			// 			display: inline-block;
+			// 			width: 48px;
+			// 			margin-right: 10px;
+
+			// 			svg, img {
+			// 				width: 100%;
+			// 				display: block;
+
+			// 				path, g {
+			// 					fill: white;
+			// 				}
+			// 			}
+			// 		}
+
+			// 		.info {
+			// 			display: inline-block;
+			// 			width: 75%;
+			// 			vertical-align: top;
+			// 			line-height: 1.1;
+
+			// 			h3 {
+			// 				font-size: 1.6rem;
+			// 				margin-bottom: 10px;
+			// 			}
+
+			// 			p {
+			// 				margin-bottom: 0;
+			// 				line-height: 1.2;
+			// 			}
+			// 		}
+
+			// 		.tribe-mini-calendar-event {
+			// 			margin-bottom: 0;
+			// 			padding: 0;
+			// 			border: 0;
+
+			// 			.list-date {
+			// 				margin-top: 0;
+			// 			}
+
+			// 			.list-info {
+			// 				margin: 0;
+
+			// 				.tribe-events-title {
+			// 					font-size: 1.6rem;
+			// 					margin-bottom: 10px;
+			// 				}
+			// 			}
+			// 		}
+			// 	}
+			// }
+
+			.bulletins-list {
+				float: left;
+				width: 100%;
+
+				.bulletin {
+					margin-bottom: 20px;
+					padding-bottom: 20px;
 					border-bottom: 1px solid white;
+					float: left;
+					width: 100%;
 
 					&:last-of-type {
-						margin-bottom: 70px;
+						margin-bottom: $site-border;
 						border-bottom: 0;
 						padding-bottom: 0;
 					}
 
-					.tribe-mini-calendar-event {
-						margin-bottom: 0;
-						padding: 0;
-						border: 0;
+					img {
+						float: left;
+						width: 25%;
+						box-sizing: border-box;
+					}
 
-						.list-date {
-							margin-top: 0;
+					.info {
+						float: left;
+						padding-left: 10px;
+						width: 75%;
+						vertical-align: top;
+						line-height: 1.1;
+						box-sizing: border-box;
+
+						h3 {
+							font-size: 1.6rem;
+							margin-bottom: 10px;
 						}
 
-						.list-info {
-							margin: 0;
-
-							.tribe-events-title {
-								font-size: 1.6rem;
-								margin-bottom: 10px;
-							}
+						.more {
+							margin-bottom: 0;
+							line-height: 1.2;
 						}
 					}
 				}
@@ -180,12 +267,12 @@ img {
 			float: right;
 			margin-right: 0;
 			background: $teal;
-			margin-bottom: 45px;
-			padding: 30px 30px 60px 30px;
-			position: absolute;
-			right: 0;
+			margin-top: $site-borderx2;
+			padding: $site-border $site-border $site-borderx2 $site-border;
+			position: relative;
+			right: -45px;
 			z-index: 0;
-			bottom: -140px;
+			bottom: 0;
 
 			&:after {
 				content: '';
@@ -226,15 +313,24 @@ img {
 			margin: 0;
 
 			&:first-of-type {
-				margin-top: 70px;
 
 				img {
-					width: calc(100% + 45px);
+					width: calc(100% + 90px);
+					margin-left: -90px
+				}
+
+				.link {
+					margin-left: -45px
 				}
 			}
 
-			&.two {
+			&.featuretwo {
 				float: right;
+				margin-top: -$site-border;
+
+				.link {
+					
+				}
 
 				img {
 					width: calc(100% + 45px);
@@ -289,10 +385,25 @@ img {
 
 	#news {
 		position: relative;
+		z-index: 2;
+		background-color: transparent;
 
-		img {
+		.imgs {
+			display: inline-block;
+			width: 100vw;
 			margin-left: -45px;
-			width: calc(100% + 90px);
+
+			img {
+				display: inline-block;
+				vertical-align: top;
+
+				&:first-of-type {
+					width: 80%;
+				}
+				&:last-of-type {
+					width: 20%;
+				}
+			}
 		}
 
 		.news-story {
@@ -307,6 +418,23 @@ img {
 			a {
 				color: inherit;
 				text-decoration: none;
+			}
+
+			p {
+				width: 70%;
+				margin: 0 auto;
+			}
+
+			button {
+				border: 0;
+				background: teal;
+				height: auto;
+				line-height: initial;
+				padding: 10px 20px;
+				color: white;
+				font-size: inherit;
+				border-radius: 0;
+				margin-top: 10px;
 			}
 
 			h3 {
@@ -327,46 +455,106 @@ img {
 		padding-bottom: 90px;
 		margin-top: 45px;
 
-		.quote {
-			background: $brown;
-			padding: 30px 30px 45px 30px;
-			position: absolute;
-			left: 0;
-			z-index: 0;
-			bottom: 60px;
-			margin: 0;
+		.events {
+			float: right;
+			background-color: $teal;
+			padding: $site-borderx3 $site-border $site-border $site-border;
+			color: white;
+			margin-top: -$site-borderx3;
+			z-index: 1;
+			position: relative;
 
-			&:after {
-				content: '';
-				position: absolute;
-				height: 100%;
-				width: -webkit-fill-available;
-				background: $brown;
-				z-index: 0;
-				top: 0;
-				left: -100%;
-				bottom: 0;
-				z-index: -1;
-			}
-
-			p {
-				color: white;
-				font-size: 2rem;
-				font-family: $serif-font;
-				font-style: italic;
-				line-height: 1.4;
-				font-weight: 100;
-			}
-
-			a {
-				color: white;
-				background: $dark-blue;
-				padding: 12px 24px;
-				text-transform: uppercase;
+			h1, h2, h3, a {
+				color: inherit;
 				text-decoration: none;
-				position: absolute;
-				bottom: -22px;
+				margin: 0;
+				text-transform: uppercase;
 			}
+
+			h2 {
+				font-family: $base-font;
+				font-size: 4rem;
+				letter-spacing: $spaced;
+				margin-bottom: $site-border;
+			}
+
+			.events-link {
+				display: inline-block;
+				width: 100%;
+
+				a {
+					background-color: $dark-blue;
+					padding: 20px;
+					display: block;
+				}
+			}
+
+			.event-list {
+
+				.tc-single-event {
+					margin-bottom: 35px;
+					padding-bottom: 35px;
+					border-bottom: 1px solid white;
+
+					&:last-of-type {
+						margin-bottom: 70px;
+						border-bottom: 0;
+						padding-bottom: 0;
+					}
+
+					.icon {
+						display: inline-block;
+						width: 48px;
+						margin-right: 10px;
+
+						svg, img {
+							width: 100%;
+							display: block;
+
+							path, g {
+								fill: white;
+							}
+						}
+					}
+
+					.info {
+						display: inline-block;
+						width: 75%;
+						vertical-align: top;
+						line-height: 1.1;
+
+						h3 {
+							font-size: 1.6rem;
+							margin-bottom: 10px;
+						}
+
+						p {
+							margin-bottom: 0;
+							line-height: 1.2;
+						}
+					}
+
+					.tribe-mini-calendar-event {
+						margin-bottom: 0;
+						padding: 0;
+						border: 0;
+
+						.list-date {
+							margin-top: 0;
+						}
+
+						.list-info {
+							margin: 0;
+
+							.tribe-events-title {
+								font-size: 1.6rem;
+								margin-bottom: 10px;
+							}
+						}
+					}
+				}
+			}
+
 		}
 
 		.featurepage {
@@ -374,7 +562,7 @@ img {
 			margin: 0;
 
 			&:first-of-type {
-				margin-top: 70px;
+				margin-top: $site-border;
 
 				img {
 					width: calc(100% + 45px);
@@ -384,13 +572,23 @@ img {
 			&.pageone {
 				float: left;
 
+				.link {
+					margin-left: 0;
+				}
+
 				img {
 					width: calc(100% + 45px);
+					margin-left: -45px;
 				}
 			}
 
 			&.pagetwo {
 				float: right;
+				margin-top: -45px;
+
+				.link {
+					margin-left: 45px;
+				}
 
 				img {
 					width: calc(100% + 45px);
@@ -398,11 +596,16 @@ img {
 			}
 
 			&.pagethree {
-				float: right;
+				float: left;
 				margin-top: $site-borderx2;
 
+				.link {
+					margin-left: -45px;
+				}
+
 				img {
-					width: calc(100% + 45px);
+					width: calc(100% + 90px);
+					margin-left: -90px;
 				}
 			}
 
@@ -411,6 +614,7 @@ img {
 				bottom: -$site-border;
 				background: white;
 				max-width: 70%;
+				
 
 				a {
 					padding: 20px;
@@ -446,6 +650,382 @@ img {
 						path {
 							fill: white;
 						}
+					}
+				}
+			}
+		}
+	}
+
+	#quotes {
+		position: relative;
+		z-index: 2;
+		background-color: transparent;
+		margin-top: 90px;
+
+		.imgs {
+			display: inline-block;
+			width: 100vw;
+			margin-left: -45px;
+
+			img {
+				display: inline-block;
+				vertical-align: bottom;
+
+				&:first-of-type {
+					width: 20%;
+				}
+				&:last-of-type {
+					width: 80%;
+				}
+			}
+		}
+
+		.news-story {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			text-align: center;
+			color: white;
+
+			a {
+				color: inherit;
+				text-decoration: none;
+			}
+
+			p {
+				width: 70%;
+				margin: 0 auto;
+			}
+
+			button {
+				border: 0;
+				background: teal;
+				height: auto;
+				line-height: initial;
+				padding: 10px 20px;
+				color: white;
+				font-size: inherit;
+				border-radius: 0;
+				margin-top: 10px;
+			}
+
+			h3 {
+				margin-bottom: 10px;
+				font-size: 2.6rem;
+				text-transform: uppercase;
+				color: inherit;
+				font-family: $base-font;
+
+				a {
+					color: inherit;
+				}
+			}
+		}
+	}
+}
+
+
+/*----------  PAGE  ----------*/
+
+.page {
+
+	#primary {
+
+		article {
+			background: white;
+			padding: $site-border;
+			margin-top: -$site-border;
+			margin-bottom: $site-border;
+			width: 80%;
+			margin-left: -$site-border;
+			box-sizing: border-box;
+
+			&.extra-padd-btm {
+				padding-bottom: $site-borderx2;
+				margin-bottom: $site-borderx2;
+			}
+
+			h3 {
+				margin: 30px 0;
+				font-size: 2.3rem;
+				text-transform: uppercase;
+			}
+
+			table {
+				width: 100%;
+			}
+
+			ul {
+				margin: 1rem 0 2rem 0;
+				padding-left: 2rem;
+				list-style: none;
+
+				li {
+					position: relative;
+
+					&:before {
+						content: '- ';
+						position: absolute;
+						left: -15px;
+						width: 15px;
+						height: 100%;
+					}
+
+					&:last-of-type {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+
+		.padd-right {
+
+			article {
+				padding-right: 135px;
+			}
+		}
+	}
+
+	.feat-img {
+		position: relative;
+		margin: 0;
+		float: right;
+		margin-top: 135px;
+		margin-bottom: $site-border;
+		z-index: 0;
+
+		img {
+			width: calc(100% + 45px);
+		}
+	}
+
+	.downloads {
+		background-color: $teal;
+		position: absolute;
+		left: 0;
+		padding: 45px;
+		margin-top: -135px;
+		margin-left: -90px;	
+
+		ul {
+			list-style: none;
+			margin: 0;
+
+			li {
+				margin-bottom: 20px;
+				vertical-align: middle;
+
+				a {
+					display: block;
+					vertical-align: middle;
+					text-decoration: none;
+					color: white;
+
+					img, svg {
+						width: 24px;
+						display: inline-block;
+						vertical-align: middle;
+						margin-right: 8px;
+
+						path, g {
+							fill: white;
+						}
+					}
+				}
+
+				&:last-of-type {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+}
+
+/*----------  CONTACT  ----------*/
+
+.contact-us {
+
+	#primary {
+
+		.gform_wrapper {
+			margin: 0;
+			max-width: 100%;
+			width: 100%;
+
+			.gform_fields {
+				padding: 0;
+				margin: 0;
+				overflow: visible;
+
+				.gfield {
+					margin: 0;
+
+					&:before {
+						display: none;
+					}
+
+					label {
+						text-transform: uppercase;
+						letter-spacing: 3px;
+						margin: 0;
+					}
+
+					.ginput_container {
+						margin: 0;
+					}
+
+					textarea, input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
+						font-size: inherit;
+						font-family: inherit;
+						padding: 5px 10px;
+						letter-spacing: normal;
+						height: inherit;
+						line-height: inherit;
+						margin-bottom: 15px;
+					}
+				}
+			}
+
+			.gform_footer {
+				padding: 0;
+				margin: 20px 0 0 0;
+				clear: both;
+				width: 100%;
+				text-align: left;
+
+				input[type=submit] {
+					font-size: inherit;
+					width: auto;
+					margin: 0;
+					background: purple;
+					color: white;
+					height: auto;
+					line-height: inherit;
+					padding: 10px 20px;
+					letter-spacing: 3px;
+					border: 0;
+					border-radius: 0;
+				}
+			}
+		}
+	}
+
+	.directions {
+		margin-bottom: 90px;
+
+		.direct {
+			background-color: $dark-blue;
+			padding: $site-border;
+			padding-bottom: $site-borderx2;
+			color: white;
+			margin-top: -$site-border;
+			margin-left: $site-border;
+
+			h3 {
+				color: inherit;
+			}
+
+			&:nth-child(even) {
+				float: right;
+				background-color: $olive;
+				z-index: 1;
+				position: relative;
+				padding-bottom: $site-border;
+				margin-right: $site-border;
+			}
+		}
+	}
+}
+
+
+/*----------  VACANCIES  ----------*/
+
+.vacancies {
+
+	#primary {
+
+		article {
+			padding-right: 140px;
+		}
+
+		.downloads {
+			background-color: $teal;
+			position: absolute;
+			top: 140px;
+			right: 0;
+			padding: 45px;
+			left: auto;
+			margin: 0;
+		}
+	}
+}
+
+/*----------  MEMBERSHIPS  ----------*/
+
+.memberships {
+
+	#primary {
+
+		.woocommerce {
+			display: inline-block;
+
+			.products {
+				margin: 0;
+				padding-left: 0;
+				list-style: none;
+
+				.product {
+					position: relative;
+					width: 100%;
+					margin: 0 0 15px 0;
+					background: #f9f9f9;
+					padding: 20px;
+
+					&::before {
+						display: none;
+					}
+
+					a {
+						
+						img {
+							display: none;
+						}
+
+						h2, h3 {
+							padding: 0;
+							margin: 0;
+							font-size: 1.6rem;
+							text-transform: uppercase;
+							display: inline-block;
+							width: 60%;
+						}
+
+						.price {
+							color: $teal;
+							display: inline-block;
+							font-weight: inherit;
+							margin-bottom: 0;
+							font-size: 2rem;
+							width: 75px;
+						}
+					}
+
+					.button {
+						margin-top: 0;
+						margin-left: 10px;
+						background: purple;
+						color: white;
+					}
+
+					.added_to_cart {
+						display: none;
+					}
+
+					&:last-of-type {
+						margin-bottom: 0;
 					}
 				}
 			}

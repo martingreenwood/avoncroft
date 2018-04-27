@@ -23,13 +23,13 @@ get_header(); ?>
 			<div class="row">
 
 				<div class="featurepage columns eight">
-
-					<img src="//placehold.it/899x615" alt="" class="offsetleft">
+					<?php $feature_one_img = get_field( 'feature_one_image' ); ?>
+					<img src="<?php echo $feature_one_img['url'] ?>" alt="" class="offsetleft">
 
 					<div class="link">
-						<a href="#">
-							<h3>Title Goes Here</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+						<a href="<?php the_field( 'feature_one_link' ); ?>">
+							<h3><?php the_field( 'feature_one_title' ); ?></h3>
+							<p><?php the_field( 'feature_one_text' ); ?></p>
 
 							<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/chevron-right.svg" class="after" alt="">
 						</a>
@@ -41,10 +41,35 @@ get_header(); ?>
 
 					<div class="wrapall">
 
-						<h2>What's on</h2>
+						<h2>Bulletins</h2>
 
-						<div class="event-list">
-							<?php echo do_shortcode( '[tribe_events_list limit="4" ]' ); ?>
+						<div class="bulletins-list">
+							<?php //echo do_shortcode( '[mini_events limit="3"]' ); ?>
+							<?php
+							$args = array( 'post_type' => 'bulletins', 'posts_per_page' => 3 );
+							$loop = new WP_Query( $args );
+							while ( $loop->have_posts() ) : $loop->the_post();
+								?>
+								<div class="bulletin">
+
+									<?php the_post_thumbnail( 'thumbnail' ); ?>
+
+									<div class="info">
+										<h3><a href="<?php the_permalink(); ?>" title=""><?php the_title(); ?></a></h3>
+										<a class="more" href="<?php the_permalink(); ?>" title="">Read more</a>
+									</div>
+
+									<div class="clear"></div>
+        						</div>
+								<?php
+							endwhile; // end CPT Loop
+							wp_reset_postdata();
+							wp_reset_query();
+							?>
+						</div>
+
+						<div class="events-link">
+							<a href="<?php echo home_url( '/bulletins' ); ?>" title="">View All Bulletins</a>
 						</div>
 
 					</div>
@@ -64,13 +89,13 @@ get_header(); ?>
 			<div class="row">
 
 				<div class="featurepage columns five">
-
-					<img src="//placehold.it/613x710" alt="" class="offsetleft">
+					<?php $feature_two_image = get_field( 'feature_two_image' ); ?>
+					<img src="<?php echo $feature_two_image['url'] ?>" alt="" class="offsetleft">
 
 					<div class="link">
-						<a href="#">
-							<h3>Title Goes Here</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+						<a href="<?php the_field( 'feature_two_link' ); ?>">
+							<h3><?php the_field( 'feature_two_title' ); ?></h3>
+							<p><?php the_field( 'feature_two_text' ); ?></p>
 
 							<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/chevron-right.svg" class="after" alt="">
 						</a>
@@ -78,14 +103,14 @@ get_header(); ?>
 
 				</div>
 
-				<div class="featurepage two columns seven">
-
-					<img src="//placehold.it/899x615" alt="" class="">
+				<div class="featurepage featuretwo columns seven">
+					<?php $feature_three_image = get_field( 'feature_three_image' ); ?>
+					<img src="<?php echo $feature_three_image['url'] ?>" alt="" class="">
 
 					<div class="link offsetright">
-						<a href="#">
-							<h3>Title Goes Here</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+						<a href="<?php the_field( 'feature_three_link' ); ?>">
+							<h3><?php the_field( 'feature_three_title' ); ?></h3>
+							<p><?php the_field( 'feature_three_text' ); ?></p>
 
 							<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/chevron-right.svg" class="after" alt="">
 						</a>
@@ -95,9 +120,9 @@ get_header(); ?>
 
 				<div class="quote three columns seven">
 
-					<p>An Avoncroft membership not only gives you access to the museum all year round but also gives you reduced fees for our Blacksmithing courses and other special offers.</p>
+					<p><?php the_field( 'feature_four_text' ); ?></p>
 
-					<a href="<?php echo home_url( '/memberships' ); ?>">Get a Membership</a>
+					<a href="<?php the_field( 'feature_four_link' ); ?>"><?php the_field( 'feature_four_link_text' ); ?></a>
 					
 				</div>
 				
@@ -108,17 +133,44 @@ get_header(); ?>
 	</section>
 
 	<section id="news">
-		<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/news.png" alt="">
+		<div class="imgs">
+			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/news1.png" alt=""><!--
+			--><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/news2.png" alt="">
+		</div>
 		<div class="news-story">
 			<div class="table">
 				<div class="cell middle">
 					<div class="container">
 						<div class="row">
 							<div class="column two-thirds offset-by-two">
-								<a href="#" title="">
-									<h3>Title Goes Here</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim.</p>
-								</a>
+							<?php
+							$sticky = get_option( 'sticky_posts' );
+							$args = array(
+								'posts_per_page'      => 2, // Number of sticky posts to get
+								'post__in'            => $sticky,
+								'ignore_sticky_posts' => 1
+							);
+							if ( !empty($sticky) ):
+								// has sticky posts
+								query_posts($args);
+								$stickyPosts = new WP_query();
+								$stickyPosts->query($args);
+								if ( $stickyPosts->have_posts() ):
+									while ( $stickyPosts->have_posts() ) : $stickyPosts->the_post();
+									?>
+									<a href="<?php the_permalink(); ?>" title="Read <?php the_title(); ?>">
+										<h3><?php the_title(); ?></h3>
+										<?php the_excerpt(); ?>
+										<button type="button">Read More</button>
+									</a>
+									<?php
+									endwhile; //end loop for sticky posts
+								endif; //have_posts()
+								// RESET THE QUERY
+								wp_reset_query();
+							endif; //has sticky posts
+							//END Custom Query for Sticky Posts only
+							?>
 							</div>
 						</div>
 					</div>
@@ -133,52 +185,62 @@ get_header(); ?>
 
 			<div class="row">
 
-				<div class="featurepage pageone columns seven">
+				<div class="events columns four">
 
-					<img src="//placehold.it/899x750" alt="" class="">
+					<div class="wrapall">
+
+						<h2>Events &amp; Workshops</h2>
+
+						<div class="event-list">
+							<?php echo do_shortcode( '[mini_events limit="3"]' ); ?>
+						</div>
+
+						<div class="events-link">
+							<a href="<?php echo home_url( '/whats-on' ); ?>" title="">View All Events</a>
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="featurepage pageone columns eight">
+					<?php $feature_five_image = get_field( 'feature_five_image' ); ?>
+					<img src="<?php echo $feature_five_image['url'] ?>" alt="" class="">
 
 					<div class="link offsetright">
-						<a href="#">
-							<h3>Title Goes Here</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+						<a href="<?php the_field( 'feature_five_link' ); ?>">
+							<h3><?php the_field( 'feature_five_title' ); ?></h3>
+							<p><?php the_field( 'feature_five_text' ); ?></p>
 
 							<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/chevron-right.svg" class="after" alt="">
 						</a>
 					</div>
-					
-				</div>
-
-				<div class="featurepage pagetwo columns four">
-
-					<img src="//placehold.it/613x710" alt="" class="offsetleft">
-
-					<div class="link">
-						<a href="#">
-							<h3>Title Goes Here</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-
-							<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/chevron-right.svg" class="after" alt="">
-						</a>
-					</div>
-
-				</div>
-
-				<div class="quote columns seven">
-
-					<p>An Avoncroft membership not only gives you access to the museum all year round but also gives you reduced fees for our Blacksmithing courses and other special offers.</p>
-
-					<a href="<?php echo home_url( '/memberships' ); ?>">Get a Membership</a>
 					
 				</div>
 
 				<div class="featurepage pagethree columns four">
-
-					<img src="//placehold.it/613x710" alt="" class="offsetleft">
+					<?php $feature_seven_image = get_field( 'feature_seven_image' ); ?>
+					<img src="<?php echo $feature_seven_image['url']; ?>" alt="" class="offsetleft">
 
 					<div class="link">
-						<a href="#">
-							<h3>Title Goes Here</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+						<a href="<?php the_field( 'feature_seven_link' ); ?>">
+							<h3><?php the_field( 'feature_seven_title' ); ?></h3>
+							<p><?php the_field( 'feature_seven_text' ); ?></p>
+
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/chevron-right.svg" class="after" alt="">
+						</a>
+					</div>
+
+				</div>
+
+				<div class="featurepage pagetwo columns eight">
+					<?php $feature_six_image = get_field( 'feature_six_image' ); ?>
+					<img src="<?php echo $feature_six_image['url'] ?>" alt="" class="">
+
+					<div class="link">
+						<a href="<?php the_field( 'feature_six_link' ); ?>">
+							<h3><?php the_field( 'feature_six_title' ); ?></h3>
+							<p><?php the_field( 'feature_six_text' ); ?></p>
 
 							<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/chevron-right.svg" class="after" alt="">
 						</a>
@@ -192,21 +254,60 @@ get_header(); ?>
 		
 	</section>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main container">
-			<div class="row">
-
-				<?php
-				while ( have_posts() ) : the_post();
-
-					get_template_part( 'template-parts/content', 'page' );
-
-				endwhile; // End of the loop.
-				?>
-
+	<section id="quotes">
+		<div class="imgs">
+			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/news2.png" alt=""><!--
+		--><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/news1.png" alt="">
+		</div>
+		<div class="news-story">
+			<div class="table">
+				<div class="cell middle">
+					<div class="container">
+						<div class="row">
+							<div class="column two-thirds offset-by-two">
+							<?php
+							$sticky = get_option( 'sticky_posts' );
+							$args = array(
+								'posts_per_page'      => 2, // Number of sticky posts to get
+								'post__in'            => $sticky,
+								'ignore_sticky_posts' => 1
+							);
+							if ( !empty($sticky) ):
+								// has sticky posts
+								query_posts($args);
+								$stickyPosts = new WP_query();
+								$stickyPosts->query($args);
+								if ( $stickyPosts->have_posts() ):
+									while ( $stickyPosts->have_posts() ) : $stickyPosts->the_post();
+									?>
+									<a href="<?php the_permalink(); ?>" title="Read <?php the_title(); ?>">
+										<h3><?php the_title(); ?></h3>
+										<?php the_excerpt(); ?>
+										<button type="button">Read More</button>
+									</a>
+									<?php
+									endwhile; //end loop for sticky posts
+								endif; //have_posts()
+								// RESET THE QUERY
+								wp_reset_query();
+							endif; //has sticky posts
+							//END Custom Query for Sticky Posts only
+							?>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
-		</main>
-	</div>
+		</div>
+	</section>
+
+	<?php
+	//while ( have_posts() ) : the_post();
+
+		//get_template_part( 'template-parts/content', 'page' );
+
+	//endwhile; // End of the loop.
+	?>
 
 <?php
 get_footer();

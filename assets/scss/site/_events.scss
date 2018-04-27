@@ -1,0 +1,255 @@
+/*
+* Skeleton V2.0.4
+* Copyright 2014, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 12/9/2014
+* Sass Version by Seth Coelen https://github.com/whatsnewsaes
+*/
+
+
+#eventlist, .tax-event_category {
+
+	#primary {
+		background: transparent;
+	}
+
+	.archive-event-list {
+		margin-top: 0;
+	}
+
+	.tc-single-event {
+		text-align: center;
+		margin-bottom: 45px;
+
+		* {
+			direction: ltr;
+		}
+
+		.image, .info {
+			display: inline-block;
+			width: 49%;
+			text-align: left;
+			vertical-align: middle;
+			box-sizing: border-box;
+		}
+
+		.info {
+			padding: $site-borderx2;
+			background-color: white;
+
+			h2 {
+				text-transform: uppercase;
+				font-size: 2.8rem;
+
+				a {
+					text-decoration: none;
+				}
+			}
+
+			.date {
+				text-transform: uppercase;
+				margin-bottom: 0;
+			}
+
+			.more {
+				display: block;
+				background: $teal;
+				padding: 10px 15px;
+				text-transform: uppercase;
+				color: white;
+				text-decoration: none;
+			}
+		}
+
+		.image {
+
+			img {
+				width: 100%;
+				margin-left: $site-border;
+				position: relative;
+				z-index: 2;
+			}
+		}
+
+		&:nth-child(even) {
+
+			.info {
+				margin-left: 0;
+			}
+
+			img {
+				margin-right: $site-border;
+			}
+
+			* {
+				direction: rtl;
+			}
+		}
+	}
+}
+
+.single-tc_events {
+
+	.additionalimage {
+		float: right;
+		width: 40%;
+		right: 0;
+		margin-top: 90px;
+		margin-bottom: 45px;
+		position: relative;
+
+		img {
+			width: 100%;
+			width: calc(100% + 90px);
+			margin-left: -90px;
+		}
+
+		p.cap {
+			position: absolute;
+			background: $dark-blue;
+			color: white;
+			width: 60%;
+			padding: 7px 14px;
+			bottom: -20px;
+		}
+	}
+
+	.additionalimagetwo {
+		float: left;
+		width: 50%;
+		right: 0;
+		margin-top: -90px;
+		margin-bottom: 45px;
+		position: relative;
+
+		img {
+			width: 100%;
+			width: calc(100% + 45px);
+			margin-left: -90px;
+		}
+
+		.eventcats {
+			width: 60%;
+			background: $orange;
+			padding: 45px;
+			margin-top: -45px;
+			position: relative;
+
+			h3 {
+				color: white;
+				text-transform: uppercase;
+				font-size: 2.6rem;
+			}
+
+			a {
+				color: white;
+				text-decoration: none;
+				text-transform: uppercase;
+				margin-bottom: 6px;
+				display: block;
+
+				&:last-of-type {
+					margin-bottom: 0;
+				}
+			}
+
+		}
+	}
+
+	.entry-content {
+		float: left;
+		width: 60%;
+		padding: 45px;
+		padding-right: 90px;
+		padding-bottom: 90px;
+		background: white;
+		margin-bottom: 45px;
+		margin-left: -45px;
+		// margin-top: -45px;
+		box-sizing: border-box;
+
+		.tickera {
+			display: none;
+			visibility: hidden;
+		}
+
+		h4 {
+			font-size: 1.6rem;
+			text-transform: uppercase;
+			color: $teal;
+
+			a {
+				color: inherit;
+				text-decoration: none;
+			}
+		}
+
+		h2 {
+			text-transform: uppercase;
+		}
+	}
+
+	.entrey-quote {
+		float: right;
+		width: 40%;
+		width: calc(40% - 45px);
+		margin: 0;
+		box-sizing: border-box;
+
+		h3 {
+			font-family: $serif-font;
+			font-style: italic;
+			margin: 0;
+			font-size: 2.5rem;
+			line-height: 1.3;
+		}
+	}
+
+	.entrey-tickets {
+		float: right;
+		// clear: both;
+		width: 45%;
+		padding: 45px;
+		margin-bottom: 45px;
+		margin-top: 45px;
+		background: white;
+		box-sizing: border-box;
+		text-transform: uppercase;
+
+		table {
+			width: 100%;
+
+			a {
+				padding: 10px 13px;
+				background: purple;
+				text-transform: uppercase;
+				color: white;
+				text-decoration: none;
+			}
+
+			.tc_in_cart {
+				text-transform: uppercase;
+
+				a {
+					padding: 0;
+					background-color: transparent;
+					color: inherit;
+				}
+			}
+		}
+	}
+}
+
+.whats-on {
+
+	article {
+
+		h4 {
+			font-size: 1.6rem;
+			text-transform: uppercase;
+			color: $teal;
+		}
+	}
+}

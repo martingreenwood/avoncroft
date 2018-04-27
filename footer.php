@@ -19,13 +19,13 @@
 	
 	<div class="container">
 
-		<div class="row logo">
+		<!-- <div class="row logo">
 			<?php
 			if ( function_exists( 'the_custom_logo' ) ) {
 				the_custom_logo();
 			}
 			?>
-		</div>
+		</div> -->
 
 		<div class="row info">
 
@@ -33,7 +33,9 @@
 				<h3>FIND US ONLINE</h3>
 				<p>We’re also on social media, so why not follow us on the channels below:</p>
 				<ul>
-					<li><a href="#" title=""></a></li>
+					<li><a href="#" title=""><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/facebook-f.svg" alt=""></a></li>
+					<li><a href="#" title=""><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/twitter.svg" alt=""></a></li>
+					<li><a href="#" title=""><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/instagram.svg" alt=""></a></li>
 				</ul>
 			</div>
 
@@ -69,10 +71,10 @@
 			<div class="logos">
 				
 				<ul>
-					<li><img src="placewholder.it/122x70" alt=""></li>
-					<li><img src="placewholder.it/150x70" alt=""></li>
-					<li><img src="placewholder.it/70x70" alt=""></li>
-					<li><img src="placewholder.it/122x70" alt=""></li>
+					<li><img src="//placehold.it/122x70" alt=""></li>
+					<li><img src="//placehold.it/150x70" alt=""></li>
+					<li><img src="//placehold.it/70x70" alt=""></li>
+					<li><img src="//placehold.it/122x70" alt=""></li>
 				</ul>
 
 			</div>
@@ -80,6 +82,12 @@
 		</div>
 
 		<div class="row copy">
+
+			<?php
+			if ( function_exists( 'the_custom_logo' ) ) {
+				the_custom_logo();
+			}
+			?>
 
 			<p><?php echo date("Y"); ?> <?php echo bloginfo( 'name' ); ?>. All rights reserved.</p>
 			

@@ -64,7 +64,7 @@ add_action( 'admin_menu', 'custom_menu_page_removing' );
 
 function is_it_open() {
 
-	$month = date('m'); // 1-12x
+	$month = date('n'); // 1-12x
 	$day = date('N'); // 1-7
 	$closedtimes = "";
 	$opentimes = "";
@@ -72,341 +72,348 @@ function is_it_open() {
 
 	switch ($month) {
 		case '1': // sat & sun
-			$opentimes = get_field( 'fan_feb_open' );
-			$closedtimes = get_field( 'fan_feb_close' );
+			$opentimes = get_field( 'fan_feb_open', 'options' );
+			$closedtimes = get_field( 'fan_feb_close', 'options' );
 				switch ($day) { 
 					case '1': { // monday
-						$opnenstatement = $noopen;
+						return  $noopen;
 					} 
 					case '2': {
-						$opnenstatement = $noopen;
+						return  $noopen;
 					} 
 					case '3': {
-						$opnenstatement = $noopen;
+						return  $noopen;
 					} 
 					case '4': {
-						$opnenstatement = $noopen;
+						return  $noopen;
 					} 
 					case '5': {
-						$opnenstatement = $noopen;
+						return  $noopen;
 					} 
 					case '6': {
-						$opnenstatement = "The museum is open today from ".$opentimes." to " .$closedtimes;
+						return  "The museum is open today from ".$opentimes." to " .$closedtimes;
 					} 
 					case '7': { 
-						$opnenstatement = "The museum is open today from ".$opentimes." to " .$closedtimes;
+						return  "The museum is open today from ".$opentimes." to " .$closedtimes;
 					} 
 				}
 			break;
 
 		case '2':
-			$opentimes = get_field( 'fan_feb_open' );
-			$closedtimes = get_field( 'fan_feb_close' );
+			$opentimes = get_field( 'fan_feb_open', 'options' );
+			$closedtimes = get_field( 'fan_feb_close', 'options' );
 				switch ($day) { 
 					case '1': { // monday
-						$opnenstatement = $noopen;
+						return  $noopen;
 					} 
 					case '2': {
-						$opnenstatement = $noopen;
+						return  $noopen;
 					} 
 					case '3': {
-						$opnenstatement = $noopen;
+						return  $noopen;
 					} 
 					case '4': {
-						$opnenstatement = $noopen;
+						return  $noopen;
 					} 
 					case '5': {
-						$opnenstatement = $noopen;
+						return  $noopen;
 					} 
 					case '6': {
-						$opnenstatement = "The museum is open today from ".$opentimes." to " .$closedtimes;
+						return  "The museum is open today from ".$opentimes." to " .$closedtimes;
 					} 
 					case '7': { 
-						$opnenstatement = "The museum is open today from ".$opentimes." to " .$closedtimes;
+						return  "The museum is open today from ".$opentimes." to " .$closedtimes;
 					} 
 				}
 			break;
 
 		case '3':
-			$opentimes = get_field( 'mar_jun_open' );
-			$closedtimes = get_field( 'mar_jun_close' );
+			$opentimes = get_field( 'mar_jun_open', 'options' );
+			$closedtimes = get_field( 'mar_jun_close', 'options' );
 				switch ($day) { 
 					case '1': { // monday
-						$opnenstatement = $noopen;
+						return  $noopen;
 					} 
 					case '2': {
-						$opnenstatement = "The museum is open today from ".$opentimes." to " .$closedtimes;
+						return  "The museum is open today from ".$opentimes." to " .$closedtimes;
 					} 
 					case '3': {
-						$opnenstatement = "The museum is open today from ".$opentimes." to " .$closedtimes;
+						return  "The museum is open today from ".$opentimes." to " .$closedtimes;
 					} 
 					case '4': {
-						$opnenstatement = "The museum is open today from ".$opentimes." to " .$closedtimes;
+						return  "The museum is open today from ".$opentimes." to " .$closedtimes;
 					} 
 					case '5': {
-						$opnenstatement = "The museum is open today from ".$opentimes." to " .$closedtimes;
+						return  "The museum is open today from ".$opentimes." to " .$closedtimes;
 					} 
 					case '6': {
-						$opnenstatement = "The museum is open today from ".$opentimes." to " .$closedtimes;
+						return  "The museum is open today from ".$opentimes." to " .$closedtimes;
 					} 
 					case '7': { 
-						$opnenstatement = $noopen;
+						return  $noopen;
 					} 
 				}
 			break;
 
 		case '4':
-			$opentimes = get_field( 'mar_jun_open' );
-			$closedtimes = get_field( 'mar_jun_close' );
+			$opentimes = get_field( 'mar_jun_open', 'options' );
+			$closedtimes = get_field( 'mar_jun_close', 'options' );
 				switch ($day) { 
 					case '1': { // monday
-						$opnenstatement = $noopen;
+						return  $noopen;
 					} 
 					case '2': {
-						$opnenstatement = "The museum is open today from ".$opentimes." to " .$closedtimes;
+						return  "The museum is open today from ".$opentimes." to " .$closedtimes;
 					} 
 					case '3': {
-						$opnenstatement = "The museum is open today from ".$opentimes." to " .$closedtimes;
+						return  "The museum is open today from ".$opentimes." to " .$closedtimes;
 					} 
 					case '4': {
-						$opnenstatement = "The museum is open today from ".$opentimes." to " .$closedtimes;
+						return  "The museum is open today from ".$opentimes." to " .$closedtimes;
 					} 
 					case '5': {
-						$opnenstatement = "The museum is open today from ".$opentimes." to " .$closedtimes;
+						return  "The museum is open today from ".$opentimes." to " .$closedtimes;
 					} 
 					case '6': {
-						$opnenstatement = "The museum is open today from ".$opentimes." to " .$closedtimes;
+						return  "The museum is open today from ".$opentimes." to " .$closedtimes;
 					} 
 					case '7': { 
-						$opnenstatement = $noopen;
+						return  $noopen;
 					} 
 				}
 			break;
 
 		case '5':
-			$opentimes = get_field( 'mar_jun_open' );
-			$closedtimes = get_field( 'mar_jun_close' );
+			$opentimes = get_field( 'mar_jun_open', 'options' );
+			$closedtimes = get_field( 'mar_jun_close', 'options' );
 				switch ($day) { 
 					case '1': { // monday
-						$opnenstatement = $noopen;
+						return  $noopen;
 					} 
 					case '2': {
-						$opnenstatement = "The museum is open today from ".$opentimes." to " .$closedtimes;
+						return  "The museum is open today from ".$opentimes." to " .$closedtimes;
 					} 
 					case '3': {
-						$opnenstatement = "The museum is open today from ".$opentimes." to " .$closedtimes;
+						return  "The museum is open today from ".$opentimes." to " .$closedtimes;
 					} 
 					case '4': {
-						$opnenstatement = "The museum is open today from ".$opentimes." to " .$closedtimes;
+						return  "The museum is open today from ".$opentimes." to " .$closedtimes;
 					} 
 					case '5': {
-						$opnenstatement = "The museum is open today from ".$opentimes." to " .$closedtimes;
+						return  "The museum is open today from ".$opentimes." to " .$closedtimes;
 					} 
 					case '6': {
-						$opnenstatement = "The museum is open today from ".$opentimes." to " .$closedtimes;
+						return  "The museum is open today from ".$opentimes." to " .$closedtimes;
 					} 
 					case '7': { 
-						$opnenstatement = $noopen;
+						return  $noopen;
 					} 
 				}
 			break;
 
 		case '6':
-			$opentimes = get_field( 'mar_jun_open' );
-			$closedtimes = get_field( 'mar_jun_close' );
+			$opentimes = get_field( 'mar_jun_open', 'options' );
+			$closedtimes = get_field( 'mar_jun_close', 'options' );
 				switch ($day) { 
 					case '1': { // monday
-						$opnenstatement = $noopen;
+						return  $noopen;
 					} 
 					case '2': {
-						$opnenstatement = "The museum is open today from ".$opentimes." to " .$closedtimes;
+						return  "The museum is open today from ".$opentimes." to " .$closedtimes;
 					} 
 					case '3': {
-						$opnenstatement = "The museum is open today from ".$opentimes." to " .$closedtimes;
+						return  "The museum is open today from ".$opentimes." to " .$closedtimes;
 					} 
 					case '4': {
-						$opnenstatement = "The museum is open today from ".$opentimes." to " .$closedtimes;
+						return  "The museum is open today from ".$opentimes." to " .$closedtimes;
 					} 
 					case '5': {
-						$opnenstatement = "The museum is open today from ".$opentimes." to " .$closedtimes;
+						return  "The museum is open today from ".$opentimes." to " .$closedtimes;
 					} 
 					case '6': {
-						$opnenstatement = "The museum is open today from ".$opentimes." to " .$closedtimes;
+						return  "The museum is open today from ".$opentimes." to " .$closedtimes;
 					} 
 					case '7': { 
-						$opnenstatement = $noopen;
+						return  $noopen;
 					} 
 				}
 			break;
 
 		case '7':
-			$opentimes = get_field( 'jul_aug_open' );
-			$closedtimes = get_field( 'jul_aug_close' );
+			$opentimes = get_field( 'jul_aug_open', 'options' );
+			$closedtimes = get_field( 'jul_aug_close', 'options' );
 				switch ($day) { 
 					case '1': { // monday
-						$opnenstatement = "The museum is open today from ".$opentimes." to " .$closedtimes;
+						return  "The museum is open today from ".$opentimes." to " .$closedtimes;
 					} 
 					case '2': {
-						$opnenstatement = "The museum is open today from ".$opentimes." to " .$closedtimes;
+						return  "The museum is open today from ".$opentimes." to " .$closedtimes;
 					} 
 					case '3': {
-						$opnenstatement = "The museum is open today from ".$opentimes." to " .$closedtimes;
+						return  "The museum is open today from ".$opentimes." to " .$closedtimes;
 					} 
 					case '4': {
-						$opnenstatement = "The museum is open today from ".$opentimes." to " .$closedtimes;
+						return  "The museum is open today from ".$opentimes." to " .$closedtimes;
 					} 
 					case '5': {
-						$opnenstatement = "The museum is open today from ".$opentimes." to " .$closedtimes;
+						return  "The museum is open today from ".$opentimes." to " .$closedtimes;
 					} 
 					case '6': {
-						$opnenstatement = "The museum is open today from ".$opentimes." to " .$closedtimes;
+						return  "The museum is open today from ".$opentimes." to " .$closedtimes;
 					} 
 					case '7': { 
-						$opnenstatement = "The museum is open today from ".$opentimes." to " .$closedtimes;
+						return  "The museum is open today from ".$opentimes." to " .$closedtimes;
 					} 
 				}
 			break;
 
 		case '8':
-			$opentimes = get_field( 'jul_aug_open' );
-			$closedtimes = get_field( 'jul_aug_close' );
+			$opentimes = get_field( 'jul_aug_open', 'options' );
+			$closedtimes = get_field( 'jul_aug_close', 'options' );
 				switch ($day) { 
 					case '1': { // monday
-						$opnenstatement = "The museum is open today from ".$opentimes." to " .$closedtimes;
+						return  "The museum is open today from ".$opentimes." to " .$closedtimes;
 					} 
 					case '2': {
-						$opnenstatement = "The museum is open today from ".$opentimes." to " .$closedtimes;
+						return  "The museum is open today from ".$opentimes." to " .$closedtimes;
 					} 
 					case '3': {
-						$opnenstatement = "The museum is open today from ".$opentimes." to " .$closedtimes;
+						return  "The museum is open today from ".$opentimes." to " .$closedtimes;
 					} 
 					case '4': {
-						$opnenstatement = "The museum is open today from ".$opentimes." to " .$closedtimes;
+						return  "The museum is open today from ".$opentimes." to " .$closedtimes;
 					} 
 					case '5': {
-						$opnenstatement = "The museum is open today from ".$opentimes." to " .$closedtimes;
+						return  "The museum is open today from ".$opentimes." to " .$closedtimes;
 					} 
 					case '6': {
-						$opnenstatement = "The museum is open today from ".$opentimes." to " .$closedtimes;
+						return  "The museum is open today from ".$opentimes." to " .$closedtimes;
 					} 
 					case '7': { 
-						$opnenstatement = "The museum is open today from ".$opentimes." to " .$closedtimes;
+						return  "The museum is open today from ".$opentimes." to " .$closedtimes;
 					} 
 				}
 			break;
 
 		case '9':
-			$opentimes = get_field( 'sep_oct_open' );
-			$closedtimes = get_field( 'sep_oct_close' );
+			$opentimes = get_field( 'sep_oct_open', 'options' );
+			$closedtimes = get_field( 'sep_oct_close', 'options' );
 				switch ($day) { 
 					case '1': { // monday
-						$opnenstatement = $noopen;
+						return  $noopen;
 					} 
 					case '2': {
-						$opnenstatement = "The museum is open today from ".$opentimes." to " .$closedtimes;
+						return  "The museum is open today from ".$opentimes." to " .$closedtimes;
 					} 
 					case '3': {
-						$opnenstatement = "The museum is open today from ".$opentimes." to " .$closedtimes;
+						return  "The museum is open today from ".$opentimes." to " .$closedtimes;
 					} 
 					case '4': {
-						$opnenstatement = "The museum is open today from ".$opentimes." to " .$closedtimes;
+						return  "The museum is open today from ".$opentimes." to " .$closedtimes;
 					} 
 					case '5': {
-						$opnenstatement = "The museum is open today from ".$opentimes." to " .$closedtimes;
+						return  "The museum is open today from ".$opentimes." to " .$closedtimes;
 					} 
 					case '6': {
-						$opnenstatement = "The museum is open today from ".$opentimes." to " .$closedtimes;
+						return  "The museum is open today from ".$opentimes." to " .$closedtimes;
 					} 
 					case '7': { 
-						$opnenstatement = $noopen;
+						return  $noopen;
 					} 
 				}
 			break;
 
 		case '10':
-			$opentimes = get_field( 'sep_oct_open' );
-			$closedtimes = get_field( 'sep_oct_close' );
+			$opentimes = get_field( 'sep_oct_open', 'options' );
+			$closedtimes = get_field( 'sep_oct_close', 'options' );
 				switch ($day) { 
 					case '1': { // monday
-						$opnenstatement = $noopen;
+						return  $noopen;
 					} 
 					case '2': {
-						$opnenstatement = "The museum is open today from ".$opentimes." to " .$closedtimes;
+						return  "The museum is open today from ".$opentimes." to " .$closedtimes;
 					} 
 					case '3': {
-						$opnenstatement = "The museum is open today from ".$opentimes." to " .$closedtimes;
+						return  "The museum is open today from ".$opentimes." to " .$closedtimes;
 					} 
 					case '4': {
-						$opnenstatement = "The museum is open today from ".$opentimes." to " .$closedtimes;
+						return  "The museum is open today from ".$opentimes." to " .$closedtimes;
 					} 
 					case '5': {
-						$opnenstatement = "The museum is open today from ".$opentimes." to " .$closedtimes;
+						return  "The museum is open today from ".$opentimes." to " .$closedtimes;
 					} 
 					case '6': {
-						$opnenstatement = "The museum is open today from ".$opentimes." to " .$closedtimes;
+						return  "The museum is open today from ".$opentimes." to " .$closedtimes;
 					} 
 					case '7': { 
-						$opnenstatement = $noopen;
+						return  $noopen;
 					} 
 				}
 			break;
 
 		case '11':
-			$opentimes = get_field( 'nov_dec_open' );
-			$closedtimes = get_field( 'nov_dec_close' );
+			$opentimes = get_field( 'nov_dec_open', 'options' );
+			$closedtimes = get_field( 'nov_dec_close', 'options' );
 				switch ($day) { 
 					case '1': { // monday
-						$opnenstatement = $noopen;
+						return  $noopen;
 					} 
 					case '2': {
-						$opnenstatement = "The museum is open today from ".$opentimes." to " .$closedtimes;
+						return  "The museum is open today from ".$opentimes." to " .$closedtimes;
 					} 
 					case '3': {
-						$opnenstatement = "The museum is open today from ".$opentimes." to " .$closedtimes;
+						return  "The museum is open today from ".$opentimes." to " .$closedtimes;
 					} 
 					case '4': {
-						$opnenstatement = "The museum is open today from ".$opentimes." to " .$closedtimes;
+						return  "The museum is open today from ".$opentimes." to " .$closedtimes;
 					} 
 					case '5': {
-						$opnenstatement = "The museum is open today from ".$opentimes." to " .$closedtimes;
+						return  "The museum is open today from ".$opentimes." to " .$closedtimes;
 					} 
 					case '6': {
-						$opnenstatement = "The museum is open today from ".$opentimes." to " .$closedtimes;
+						return  "The museum is open today from ".$opentimes." to " .$closedtimes;
 					} 
 					case '7': { 
-						$opnenstatement = $noopen;
+						return  $noopen;
 					} 
 				}
 			break;
 
 		case '12':
-			$opentimes = get_field( 'nov_dec_open' );
-			$closedtimes = get_field( 'nov_dec_close' );
+			$opentimes = get_field( 'nov_dec_open', 'options' );
+			$closedtimes = get_field( 'nov_dec_close', 'options' );
 				switch ($day) { 
 					case '1': { // monday
-						$opnenstatement = $noopen;
+						return  $noopen;
 					} 
 					case '2': {
-						$opnenstatement = "The museum is open today from ".$opentimes." to " .$closedtimes;
+						return  "The museum is open today from ".$opentimes." to " .$closedtimes;
 					} 
 					case '3': {
-						$opnenstatement = "The museum is open today from ".$opentimes." to " .$closedtimes;
+						return  "The museum is open today from ".$opentimes." to " .$closedtimes;
 					} 
 					case '4': {
-						$opnenstatement = "The museum is open today from ".$opentimes." to " .$closedtimes;
+						return  "The museum is open today from ".$opentimes." to " .$closedtimes;
 					} 
 					case '5': {
-						$opnenstatement = "The museum is open today from ".$opentimes." to " .$closedtimes;
+						return  "The museum is open today from ".$opentimes." to " .$closedtimes;
 					} 
 					case '6': {
-						$opnenstatement = "The museum is open today from ".$opentimes." to " .$closedtimes;
+						return  "The museum is open today from ".$opentimes." to " .$closedtimes;
 					} 
 					case '7': { 
-						$opnenstatement = $noopen;
+						return  $noopen;
 					} 
 				}
 			break;
 	}
-
-	return $opnenstatement;
 }
+
+function get_the_content_with_formatting ($more_link_text = '(more...)', $stripteaser = 0, $more_file = '') {
+	$content = get_the_content($more_link_text, $stripteaser, $more_file);
+	$content = apply_filters('the_content', $content);
+	$content = str_replace(']]>', ']]&gt;', $content);
+	return $content;
+}
+
+remove_filter('the_content', 'modify_the_content');

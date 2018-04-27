@@ -164,6 +164,13 @@
 
 		});
 
+		$('.map2').each(function(){
+
+			// create map
+			map = new_map( $(this) );
+
+		});
+
 	});
 
 })(jQuery);

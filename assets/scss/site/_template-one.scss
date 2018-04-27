@@ -1,0 +1,144 @@
+/*
+* Skeleton V2.0.4
+* Copyright 2014, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 12/9/2014
+* Sass Version by Seth Coelen https://github.com/whatsnewsaes
+*/
+
+.page-template-template-one {
+
+	#primary {
+		margin-bottom: 180px;
+
+		article {
+			float: right;
+			width: 60%;
+			padding-left: 135px;
+			padding-top: 135px;
+			padding-bottom: 180px;
+
+			h2 {
+				text-transform: uppercase;
+				font-size: 5rem;
+			}
+
+			h4 {
+				font-size: 1.3rem;
+				text-transform: uppercase;
+				color: $teal;
+				margin-bottom: 10px;
+			}
+		}
+
+		.bottom-right-image {
+			width: 70%;
+			float: right;
+			margin-top: -180px;
+			margin-right: -213px;
+			min-width: 860px;
+
+			img {
+				width: 100%;
+			}
+
+			p {
+				position: absolute;
+				bottom: -40px;
+				padding: 15px;
+				background: $dark-blue;
+				color: white;
+				line-height: 1.3;
+				width: 60%;
+				margin-left: 45px;
+			}
+		}
+
+		.top-left-image-extra {
+			width: 50%;
+			position: absolute;
+			padding-bottom: 135px;
+			top: 90px;
+			margin-left: -45px;
+
+			.img {
+				position: relative;
+
+				img {
+					width: 100%;
+				}
+
+				p {
+					position: absolute;
+					bottom: -40px;
+					padding: 15px;
+					background: $dark-blue;
+					color: white;
+					line-height: 1.3;
+					width: 60%;
+					margin-left: 45px;
+				}
+			}
+
+			.blurb {
+				margin-left: 45px;
+				margin-top: 90px;
+				width: 70%;
+				margin-bottom: 45px;
+
+				p {
+					font-family: $serif-font;
+					font-style: italic;
+					font-size: 2rem;
+				}
+			}
+
+			.blurb-coloured {
+				width: 70%;
+				margin-bottom: 45px;
+				padding: 30px 135px 20px 45px;
+				position: relative;
+				background: $brown;
+				z-index: 1;
+
+				&:after {
+					content: '';
+					position: absolute;
+					height: 100%;
+					width: -webkit-fill-available;
+					background: $brown;
+					z-index: 0;
+					top: 0;
+					left: -100%;
+					bottom: 0;
+					z-index: -1;
+				}
+
+				p {
+					font-family: $serif-font;
+					font-style: italic;
+					font-size: 2rem;
+					color: white;
+				}
+			}
+
+
+			.link {
+				position: absolute;
+				bottom: 0;
+				width: 70%;
+				background: $teal;
+
+				a {
+					color: white;
+					text-transform: uppercase;
+					padding: 20px 40px;
+					display: block;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}

@@ -38,13 +38,12 @@
 	.pace-progress {
 		display: block;
 		position: fixed;
-		z-index: 2000;
+		z-index: 99999;
 		top: 0;
 		right: 100%;
 		width: 100%;
 		height: 10px;
-		background: #000000;
-
+		background: $orange;
 		pointer-events: none;
 	}
 }
@@ -53,7 +52,7 @@
 	width: 100%;
 	height: $site-border;
 	position: fixed;
-	z-index: 1;
+	z-index: 2;
 	box-sizing: border-box;
 	left: 0;
 	top: 0;
@@ -64,6 +63,9 @@
 	position: absolute;
 	top: $site-border;
 	width: 100%;
+	width: calc(100% - 90px);
+	left: $site-border;
+	z-index: 1;
 
 	.row {
 
@@ -74,11 +76,35 @@
 	}
 }
 
+.parallax-slider {
+
+	.wp-video {
+		max-width: 100%;
+		height: auto;
+		position: absolute;
+		width: 100% !important;
+		height: 100%;
+	}
+	.mejs-video {
+		height: 100% !important;
+		width: 100% !important;
+
+		.wp-video-shortcode {
+			height: 100% !important;
+			width: 100% !important;
+		}
+	}
+}
+
 #banner {
 	margin-top: $site-border;
     height: 50vh;
     background: transparent;
 	position: relative;
+
+	.squash {
+		width: 60%;
+	}
 
 	.home-links {
 		position: absolute;
@@ -157,12 +183,25 @@
 
 		h1, h2 {
 			margin-bottom: 25px;
-
+			text-transform: uppercase;
 		}
 
 		h3 {
 			font-size: 1.6rem;
 			margin-bottom: 10px;
+			text-transform: uppercase;
+
+			a {
+				background-color: none;
+				margin: 0;
+				padding: 0;
+				background: none;
+				border: 0;
+
+				&:hover {
+					background-color: none;
+				}
+			}
 		}
 
 		p {
