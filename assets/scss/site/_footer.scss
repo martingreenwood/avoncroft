@@ -88,19 +88,46 @@
 
 	.copy {
 		margin-bottom: $site-border;
+		text-align: center;
+
+		@media (#{$bp-larger-than-tablet}) {
+			text-align: left;
+		}
 
 		img, svg {
-			float: left;
+			display: inline-block;
 			width: 150px;
+			margin-bottom: 10px;
+
+			@media (#{$bp-larger-than-tablet}) {
+				float: left;
+				margin-bottom: 0;
+			}
 		}
 
 		p {
-			float: right;
-			line-height: 39px;
+			
+			@media (#{$bp-larger-than-tablet}) {
+				float: right;
+				line-height: 39px;
+			}
+		}
+	}
+
+	.copyright {
+		margin-bottom: 20px;
+
+		@media (#{$bp-larger-than-tablet}) {
+			margin-bottom: 0;
 		}
 	}
 
 	.social {
+		margin-bottom: 20px;
+
+		@media (#{$bp-larger-than-tablet}) {
+			margin-bottom: 0;
+		}
 
 		ul {
 			margin: 10px 0 0 0;

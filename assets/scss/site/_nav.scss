@@ -9,13 +9,18 @@
 */
 
 #site-navigation {
-	width: 50vw;
+	width: 75vw;
 	height: 100vh;
 	position: fixed;
-	right: -50vw;
+	right: -75vw;
 	z-index: 999;
 	background: #e9e9e9;
 	top: 0;
+
+	@media (#{$bp-larger-than-tablet}) {
+		width: 50vw;
+		right: -50vw;
+	}
 
 	-webkit-transition: all .25s linear;
 	   -moz-transition: all .25s linear;
@@ -81,12 +86,20 @@
 		display: block;
 
 		.basket {
-			position: absolute;
-			right: 45px;
-			top: 90px;
+
+			position: relative;
+			right: 0;
+			top: 10px;
 			text-transform: uppercase;
 			letter-spacing: 3px;
-			line-height: 42px;
+			line-height: 1;
+
+			@media (#{$bp-larger-than-tablet}) {
+				position: absolute;
+				right: 45px;
+				top: 90px;
+				line-height: 42px;
+			}
 
 			a {
 				text-decoration: none;
@@ -123,18 +136,31 @@
 
 					li {
 						float: left;
-						width: 50%;
-						margin-bottom: 0;
+						width: 100%;
+						margin-bottom: 10px;
+
+						&:last-of-type {
+							margin-bottom: 0;
+						}
+
+						@media (#{$bp-larger-than-tablet}) {
+							width: 50%;
+							margin-bottom: 0;
+						}
 
 						a {
 							display: block;
-							width: 95%;
+							width: 100%;
 							padding: 20px;
 							background-color: $primary-color;
 							box-sizing: border-box;
 							color: white;
 							text-transform: uppercase;;
 							text-decoration: none;
+
+							@media (#{$bp-larger-than-tablet}) {
+								width: 95%;
+							}
 						}
 
 						&:last-of-type {
@@ -189,9 +215,13 @@
 
 						li {
 							display: inline-block;
-							width: 49%;
+							width: 100%;
 							vertical-align: top;
 							margin-bottom: 30px;
+
+							@media (#{$bp-larger-than-tablet}) {
+								width: 49%;
+							}
 
 							&:before {
 								content: '';

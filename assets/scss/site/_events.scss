@@ -11,6 +11,10 @@
 
 #eventlist, .tax-event_category {
 
+	.container {
+		width: 100%;
+	}
+
 	#primary {
 		background: transparent;
 	}
@@ -36,8 +40,20 @@
 		}
 
 		.info {
-			padding: $site-borderx2;
+			padding: $site-border;
 			background-color: white;
+			width: 100%;
+
+			z-index: 1;
+			position: relative;
+			margin-top: 90px;
+
+			@media (#{$bp-larger-than-tablet}) {
+				width: 49%;
+				padding: $site-borderx2;
+				margin-top: 0;
+				z-index: inherit;
+			}
 
 			h2 {
 				text-transform: uppercase;
@@ -64,6 +80,16 @@
 		}
 
 		.image {
+			position: absolute;
+			width: 100%;
+			z-index: 0;
+			margin-top: 0;
+			
+			@media (#{$bp-larger-than-tablet}) {
+				position: relative;
+				width: 49%;
+				z-index: auto;
+			}
 
 			img {
 				width: 100%;

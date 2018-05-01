@@ -299,6 +299,17 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"\/assets\/img\/hompage-bg-mobile.jpg": {
+		"ft": 16384,
+		"iS": 685250,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/assets\/img\/hompage-bg-mobile.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"\/assets\/img\/hompage-bg.jpg": {
 		"ft": 16384,
 		"iS": 933695,
@@ -385,6 +396,39 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/assets\/img\/quotes.png": {
+		"ft": 32768,
+		"iS": 1043730,
+		"oA": 0,
+		"oAP": "\/assets\/img\/quotes.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/img\/quotes1.png": {
+		"ft": 32768,
+		"iS": 637664,
+		"oA": 0,
+		"oAP": "\/assets\/img\/quotes1.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/img\/quotes2.png": {
+		"ft": 32768,
+		"iS": 361754,
+		"oA": 0,
+		"oAP": "\/assets\/img\/quotes2.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/assets\/img\/roof2.jpg": {
 		"ft": 16384,
 		"iS": 330949,
@@ -423,7 +467,7 @@
 		"oA": 0,
 		"oAP": "\/assets\/js\/base-min.js",
 		"oF": 0,
-		"sC": 3,
+		"sC": 0,
 		"tS": 0
 		},
 	"\/assets\/js\/customizer.js": {
@@ -433,7 +477,7 @@
 		"oA": 0,
 		"oAP": "\/assets\/js\/customizer-min.js",
 		"oF": 0,
-		"sC": 3,
+		"sC": 0,
 		"tS": 0
 		},
 	"\/assets\/js\/map-min.js": {
@@ -453,7 +497,7 @@
 		"oA": 0,
 		"oAP": "\/assets\/js\/map-min.js",
 		"oF": 0,
-		"sC": 3,
+		"sC": 0,
 		"tS": 0
 		},
 	"\/assets\/js\/navigation.js": {
@@ -463,7 +507,7 @@
 		"oA": 0,
 		"oAP": "\/assets\/js\/navigation-min.js",
 		"oF": 0,
-		"sC": 3,
+		"sC": 0,
 		"tS": 0
 		},
 	"\/assets\/js\/parallax.js": {
@@ -473,7 +517,7 @@
 		"oA": 0,
 		"oAP": "\/assets\/js\/parallax-min.js",
 		"oF": 0,
-		"sC": 3,
+		"sC": 0,
 		"tS": 0
 		},
 	"\/assets\/js\/skip-link-focus-fix.js": {
@@ -483,7 +527,7 @@
 		"oA": 0,
 		"oAP": "\/assets\/js\/skip-link-focus-fix-min.js",
 		"oF": 0,
-		"sC": 3,
+		"sC": 0,
 		"tS": 0
 		},
 	"\/assets\/scss\/base\/_base-styles.scss": {

@@ -9,12 +9,18 @@ else:
 	$bannerimage = get_template_directory_uri() . '/assets/img/inner-img.jpg'; 
 endif; 
 ?>
-<section id="banner" class="parallax-window" data-parallax="scroll" data-bleed="50" data-image-src="<?php echo $bannerimage; ?>">
+<?php if (get_field( 'video' )): ?>
+	<section id="banner" class="has-video">
+<?php else: ?>
+	<section id="banner" class="parallax-window" data-parallax="scroll" data-bleed="50" data-image-src="<?php echo $bannerimage; ?>">
+<?php endif; ?>
+
 	<?php if (get_field( 'video' )): ?>
-		<div class="parallax-slider">
-			<?php echo do_shortcode( '[video mp4="'.get_field( 'video' ).'" loop="on" autoplay="on" width="1920" width="1080"]' ); ?>
-		</div>
+		<div class="video"><!--
+			--><?php echo do_shortcode( '[video mp4="'.get_field( 'video' ).'" loop="on" autoplay="on" width="1920" height="1080"]' ); ?><!--
+		--></div>
 	<?php endif ?>
+
 	<div class="blurb">
 
 		<div class="table">

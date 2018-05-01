@@ -22,21 +22,6 @@ get_header(); ?>
 
 			<div class="row">
 
-				<div class="featurepage columns eight">
-					<?php $feature_one_img = get_field( 'feature_one_image' ); ?>
-					<img src="<?php echo $feature_one_img['url'] ?>" alt="" class="offsetleft">
-
-					<div class="link">
-						<a href="<?php the_field( 'feature_one_link' ); ?>">
-							<h3><?php the_field( 'feature_one_title' ); ?></h3>
-							<p><?php the_field( 'feature_one_text' ); ?></p>
-
-							<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/chevron-right.svg" class="after" alt="">
-						</a>
-					</div>
-					
-				</div>
-
 				<div class="events columns four">
 
 					<div class="wrapall">
@@ -74,6 +59,21 @@ get_header(); ?>
 
 					</div>
 
+				</div>
+
+				<div class="featurepage columns eight">
+					<?php $feature_one_img = get_field( 'feature_one_image' ); ?>
+					<img src="<?php echo $feature_one_img['url'] ?>" alt="" class="offsetleft">
+
+					<div class="link">
+						<a href="<?php the_field( 'feature_one_link' ); ?>">
+							<h3><?php the_field( 'feature_one_title' ); ?></h3>
+							<p><?php the_field( 'feature_one_text' ); ?></p>
+
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/chevron-right.svg" class="after" alt="">
+						</a>
+					</div>
+					
 				</div>
 				
 			</div>
@@ -256,8 +256,8 @@ get_header(); ?>
 
 	<section id="quotes">
 		<div class="imgs">
-			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/news2.png" alt=""><!--
-		--><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/news1.png" alt="">
+			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/quotes2.png" alt=""><!--
+		--><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/quotes1.png" alt="">
 		</div>
 		<div class="news-story">
 			<div class="table">
@@ -265,34 +265,29 @@ get_header(); ?>
 					<div class="container">
 						<div class="row">
 							<div class="column two-thirds offset-by-two">
-							<?php
-							$sticky = get_option( 'sticky_posts' );
-							$args = array(
-								'posts_per_page'      => 2, // Number of sticky posts to get
-								'post__in'            => $sticky,
-								'ignore_sticky_posts' => 1
-							);
-							if ( !empty($sticky) ):
-								// has sticky posts
-								query_posts($args);
-								$stickyPosts = new WP_query();
-								$stickyPosts->query($args);
-								if ( $stickyPosts->have_posts() ):
-									while ( $stickyPosts->have_posts() ) : $stickyPosts->the_post();
-									?>
-									<a href="<?php the_permalink(); ?>" title="Read <?php the_title(); ?>">
-										<h3><?php the_title(); ?></h3>
-										<?php the_excerpt(); ?>
-										<button type="button">Read More</button>
-									</a>
+								<div class="testimonials">
 									<?php
-									endwhile; //end loop for sticky posts
-								endif; //have_posts()
-								// RESET THE QUERY
-								wp_reset_query();
-							endif; //has sticky posts
-							//END Custom Query for Sticky Posts only
-							?>
+									if( have_rows('testimonials', 'options') ):
+									while ( have_rows('testimonials', 'options') ) : the_row();
+									?>
+									<div>
+										<?php if (get_sub_field( 'type') === 'at' ): ?>
+											<i class="fas fa-<?php the_sub_field( 'type' ); ?>"></i>
+										<?php else: ?>
+											<i class="fab fa-<?php the_sub_field( 'type' ); ?>"></i>
+										<?php endif; ?>
+										<p>
+											<?php the_sub_field( 'text' ); ?>
+										</p>
+										<p class="reviewer">
+											<?php the_sub_field( 'reviewer' ); ?>
+										</p>
+									</div>
+									<?php
+									endwhile;
+									endif;
+									?>
+								</div>
 							</div>
 						</div>
 					</div>

@@ -13,6 +13,11 @@
 	height: 400px;
 	border: #fff solid $site-border;
 	margin-bottom: $site-border;
+	margin-left: -45px;
+
+	@media (#{$bp-larger-than-tablet}) {
+		margin-left: 0;
+	}
 
 	/* fixes potential theme css conflict */
 	img {
@@ -50,20 +55,62 @@ img {
     max-width: none;
 }
 
+.woocommerce-error, .woocommerce-info, .woocommerce-message {
+	position: fixed;
+	top: 45px;
+	width: 100%;
+	left: 0;
+	box-sizing: border-box;
+	z-index: 2;
+	text-align: center;
+
+	@media (#{$bp-larger-than-tablet}) {
+		text-align: left;
+	}
+
+	button {
+		display: none;
+	}
+}
+
 /*----------  Home  ----------*/
 
-.home {
+.home, .page-template-template-landing-page {
+
+	.mejs-controls {
+		display: none;
+	}
 
 	#banner {
 		height: 80vh;
+
+		&.has-video {
+			height: calc(100vh - 90px);
+			background-image: url(assets/img/hompage-bg-mobile.jpg);
+			background-position: center;
+			background-size: cover;
+
+			@media (#{$bp-larger-than-tablet}) {
+				height: auto;
+				background: none;
+			}
+		}
 	}
 
 	#rowone {
 
+		.container {
+			width: 100%;
+		}
+
 		.featurepage {
 			margin-top: $site-border;
-			margin-bottom: $site-border;
 			position: relative;
+			margin-bottom: 90px;
+
+			@media (#{$bp-larger-than-tablet}) {
+				margin-bottom: $site-border;
+			}
 
 			img {
 				width: calc(100% + 45px);
@@ -73,7 +120,11 @@ img {
 				position: absolute;
 				bottom: -$site-border;
 				background: white;
-				max-width: 70%;
+				max-width: 90%;
+
+				@media (#{$bp-larger-than-tablet}) {
+					max-width: 70%;
+				}
 				
 
 				a {
@@ -122,6 +173,11 @@ img {
 			color: white;
 			position: relative;
 			z-index: 1;
+			margin-top: 45px;
+
+			@media (#{$bp-larger-than-tablet}) {
+				margin-top: 0;
+			}
 
 			h1, h2, h3, a {
 				color: inherit;
@@ -132,9 +188,17 @@ img {
 
 			h2 {
 				font-family: $base-font;
-				font-size: 4rem;
+				font-size: 2.6rem;
 				letter-spacing: $spaced;
 				margin-bottom: $site-border;
+
+				@media (#{$bp-larger-than-tablet}) {
+					font-size: 3rem;
+				}
+
+				@media (#{$bp-larger-than-desktop}) {
+					font-size: 4rem;
+				}
 			}
 
 			.events-link {
@@ -263,16 +327,30 @@ img {
 	#rowtwo {
 		padding-bottom: 162px;
 
+		.container {
+			width: 100%;
+		}
+
 		.quote {
-			float: right;
 			margin-right: 0;
 			background: $teal;
 			margin-top: $site-borderx2;
 			padding: $site-border $site-border $site-borderx2 $site-border;
 			position: relative;
-			right: -45px;
 			z-index: 0;
 			bottom: 0;
+
+			float: left;
+			left: -45px;
+			right: 0;
+			width: 100vw;
+
+			@media (#{$bp-larger-than-tablet}) {
+				right: -45px;
+				left: auto;
+				width: 100%;
+				float: right;
+			}
 
 			&:after {
 				content: '';
@@ -286,6 +364,11 @@ img {
 				right: 0;
 				bottom: 0;
 				z-index: -1;
+				display: none;
+
+				@media (#{$bp-larger-than-desktop}) {
+					display: block;
+				}
 			}
 
 			p {
@@ -313,14 +396,25 @@ img {
 			margin: 0;
 
 			&:first-of-type {
+				margin-bottom: 90px;
 
 				img {
-					width: calc(100% + 90px);
-					margin-left: -90px
+					width: 100%;
+					margin-left: 0;
+
+					@media (#{$bp-larger-than-tablet}) {
+						width: calc(100% + 90px);
+						margin-left: -90px
+					}
 				}
 
 				.link {
-					margin-left: -45px
+					margin-left: -45px;
+					margin-bottom: 25px;
+					
+					@media (#{$bp-larger-than-tablet}) {
+						margin-bottom: 0;
+					}
 				}
 			}
 
@@ -329,7 +423,11 @@ img {
 				margin-top: -$site-border;
 
 				.link {
-					
+					margin-left: 10px;
+
+					@media (#{$bp-larger-than-tablet}) {
+						margin-left: 45px;
+					}
 				}
 
 				img {
@@ -341,7 +439,11 @@ img {
 				position: absolute;
 				bottom: -$site-border;
 				background: white;
-				max-width: 70%;
+				max-width: 90%;
+				
+				@media (#{$bp-larger-than-tablet}) {
+					max-width: 70%;
+				}
 
 				a {
 					padding: 20px;
@@ -386,7 +488,18 @@ img {
 	#news {
 		position: relative;
 		z-index: 2;
-		background-color: transparent;
+		left: -45px;
+		width: 100vw;
+		background-image: url(assets/img/news1.png);
+		background-position: center;
+		background-size: cover;
+
+		@media (#{$bp-larger-than-tablet}) {
+			background-color: transparent;
+			background-image: none;
+			left: auto;
+			width: 100%;
+		}
 
 		.imgs {
 			display: inline-block;
@@ -394,8 +507,12 @@ img {
 			margin-left: -45px;
 
 			img {
-				display: inline-block;
+				display: none;
 				vertical-align: top;
+
+				@media (#{$bp-larger-than-tablet}) {
+					display: inline-block;
+				}
 
 				&:first-of-type {
 					width: 80%;
@@ -407,13 +524,21 @@ img {
 		}
 
 		.news-story {
-			position: absolute;
+			position: relative;
 			top: 0;
 			left: 0;
 			width: 100%;
 			height: 100%;
 			text-align: center;
 			color: white;
+
+			margin-bottom: 19px;
+			display: inline-block;
+
+			@media (#{$bp-larger-than-tablet}) {
+				position: absolute;
+				margin-bottom: 0;
+			}
 
 			a {
 				color: inherit;
@@ -455,14 +580,24 @@ img {
 		padding-bottom: 90px;
 		margin-top: 45px;
 
+		.container {
+			width: 100%;
+		}
+
 		.events {
 			float: right;
 			background-color: $teal;
-			padding: $site-borderx3 $site-border $site-border $site-border;
+			padding: $site-border $site-border $site-border $site-border;
 			color: white;
-			margin-top: -$site-borderx3;
 			z-index: 1;
 			position: relative;
+			margin-bottom: $site-border;
+
+			@media (#{$bp-larger-than-tablet}) {
+				padding: $site-borderx3 $site-border $site-border $site-border;
+				margin-top: -$site-borderx3;
+				margin-bottom: 0;
+			}
 
 			h1, h2, h3, a {
 				color: inherit;
@@ -472,10 +607,14 @@ img {
 			}
 
 			h2 {
+				font-size: 2.6rem;
 				font-family: $base-font;
-				font-size: 4rem;
 				letter-spacing: $spaced;
 				margin-bottom: $site-border;
+
+				@media (#{$bp-larger-than-tablet}) {
+					font-size: 4rem;
+				}
 			}
 
 			.events-link {
@@ -519,9 +658,13 @@ img {
 
 					.info {
 						display: inline-block;
-						width: 75%;
+						width: 73%;
 						vertical-align: top;
 						line-height: 1.1;
+
+						@media (#{$bp-larger-than-tablet}) {
+							width: 75%;
+						}
 
 						h3 {
 							font-size: 1.6rem;
@@ -574,6 +717,9 @@ img {
 
 				.link {
 					margin-left: 0;
+
+					@media (#{$bp-larger-than-tablet}) {
+					}
 				}
 
 				img {
@@ -587,7 +733,9 @@ img {
 				margin-top: -45px;
 
 				.link {
-					margin-left: 45px;
+					@media (#{$bp-larger-than-tablet}) {
+						margin-left: 45px;
+					}
 				}
 
 				img {
@@ -598,14 +746,24 @@ img {
 			&.pagethree {
 				float: left;
 				margin-top: $site-borderx2;
+				margin-bottom: 135px;
+
+				@media (#{$bp-larger-than-tablet}) {
+					margin-bottom: 0;
+				}
 
 				.link {
 					margin-left: -45px;
 				}
 
 				img {
-					width: calc(100% + 90px);
-					margin-left: -90px;
+					width: 100%;
+					margin-left: 0;
+
+					@media (#{$bp-larger-than-tablet}) {
+						width: calc(100% + 90px);
+						margin-left: -90px;
+					}
 				}
 			}
 
@@ -613,8 +771,11 @@ img {
 				position: absolute;
 				bottom: -$site-border;
 				background: white;
-				max-width: 70%;
-				
+				max-width: 90%;
+
+				@media (#{$bp-larger-than-tablet}) {
+					max-width: 70%;
+				}
 
 				a {
 					padding: 20px;
@@ -657,15 +818,88 @@ img {
 	}
 
 	#quotes {
-		position: relative;
-		z-index: 2;
-		background-color: transparent;
 		margin-top: 90px;
 
+		position: relative;
+		z-index: 2;
+		left: -45px;
+		width: 100vw;
+		background-image: url(assets/img/quotes1.png);
+		background-position: center;
+		background-size: cover;
+		padding: 25px 0;
+
+		@media (#{$bp-larger-than-tablet}) {
+			background-color: transparent;
+			background-image: none;
+			left: auto;
+			width: 100%;
+			padding: 0;
+		}
+
+		.testimonials {
+			margin: 0;
+
+			.slick-slide {
+
+				svg {
+					font-size: 70px;
+					margin-bottom: 20px;
+				}
+
+				p {
+					font-weight: 100;
+					margin-bottom: 20px;
+
+					&:last-of-type {
+						margin-bottom: 0;
+					}
+				}
+			}
+
+			.slick-dots {
+				position: absolute;
+				width: 30px;
+				right: 0;
+				list-style: none;
+				margin: 0;
+				top: 80px;
+				height: fit-content;
+
+				li {
+					position: relative;
+					display: block;
+					width: 30px;
+					height: 30px;
+					margin: 0;
+					padding: 0;
+					cursor: pointer;
+					margin: 0;
+
+					 button {
+						padding: 0;
+						margin: 0;
+						width: 30px;
+						line-height: 30px;
+						border-radius: 50%;
+						font-size: 1rem;
+
+					 	&:before {
+							display: none
+						}
+					 }
+				}
+			}
+		}
+
 		.imgs {
-			display: inline-block;
+			display: none;
 			width: 100vw;
 			margin-left: -45px;
+
+			@media (#{$bp-larger-than-tablet}) {
+				display: inline-block;
+			}
 
 			img {
 				display: inline-block;
@@ -681,13 +915,17 @@ img {
 		}
 
 		.news-story {
-			position: absolute;
+			position: relative;
 			top: 0;
 			left: 0;
 			width: 100%;
 			height: 100%;
 			text-align: center;
 			color: white;
+
+			@media (#{$bp-larger-than-tablet}) {
+				position: absolute;
+			}
 
 			a {
 				color: inherit;
@@ -738,9 +976,13 @@ img {
 			padding: $site-border;
 			margin-top: -$site-border;
 			margin-bottom: $site-border;
-			width: 80%;
+			width: calc(100% + 45px);
 			margin-left: -$site-border;
 			box-sizing: border-box;
+
+			@media (#{$bp-larger-than-tablet}) {
+				width: 80%;
+			}
 
 			&.extra-padd-btm {
 				padding-bottom: $site-borderx2;
@@ -751,6 +993,14 @@ img {
 				margin: 30px 0;
 				font-size: 2.3rem;
 				text-transform: uppercase;
+			}
+
+			h2 {
+				font-size: 2.6rem;
+				
+				@media (#{$bp-larger-than-tablet}) {
+					font-size: 3.6rem;
+				}
 			}
 
 			table {
@@ -764,6 +1014,7 @@ img {
 
 				li {
 					position: relative;
+					margin-bottom: 1px;
 
 					&:before {
 						content: '- ';
@@ -783,7 +1034,10 @@ img {
 		.padd-right {
 
 			article {
-				padding-right: 135px;
+
+				@media (#{$bp-larger-than-tablet}) {
+					padding-right: 135px;
+				}
 			}
 		}
 	}
@@ -795,6 +1049,11 @@ img {
 		margin-top: 135px;
 		margin-bottom: $site-border;
 		z-index: 0;
+		display: none;
+
+		@media (#{$bp-larger-than-tablet}) {
+			display: block;
+		}
 
 		img {
 			width: calc(100% + 45px);
@@ -808,6 +1067,11 @@ img {
 		padding: 45px;
 		margin-top: -135px;
 		margin-left: -90px;	
+		width: calc(100% + 90px);
+
+		@media (#{$bp-larger-than-tablet}) {
+			width: 100%;
+		}
 
 		ul {
 			list-style: none;
@@ -948,17 +1212,78 @@ img {
 	#primary {
 
 		article {
-			padding-right: 140px;
+			margin-bottom: 170px;
+
+			@media (#{$bp-larger-than-tablet}) {
+				margin-bottom: 0;
+				padding-right: 140px;
+			}
 		}
 
 		.downloads {
 			background-color: $teal;
 			position: absolute;
-			top: 140px;
 			right: 0;
 			padding: 45px;
 			left: auto;
 			margin: 0;
+
+			top: auto;
+			bottom: 20px;
+
+			@media (#{$bp-larger-than-tablet}) {
+				top: 140px;
+				bottom: auto;
+			}
+
+		}
+	}
+}
+
+/*----------  FEEDBACK  ----------*/
+
+.feedback {
+
+	#primary {
+
+		.sections {
+			margin-top: 45px;
+
+			.container {
+				width: 100%;
+
+				@media (#{$bp-larger-than-tablet}) {
+					width: 85%;
+				}
+			}
+
+			.text {
+				width: 90%;
+				margin-top: -45px;
+				padding: 90px 45px;
+
+
+				@media (#{$bp-larger-than-tablet}) {
+					padding: 140px;
+					width: 75%;
+				}
+			}
+
+			.row {
+				margin-bottom: 0;
+
+				&:nth-child(even) {
+
+					.text {
+						float: right;
+						background-color: $teal;
+						color: white;
+
+						z-index: 2;
+						position: relative;
+					}
+				}
+			}
 		}
 	}
 }
@@ -983,6 +1308,8 @@ img {
 					margin: 0 0 15px 0;
 					background: #f9f9f9;
 					padding: 20px;
+					float: left;
+					box-sizing:border-box;
 
 					&::before {
 						display: none;
@@ -1015,9 +1342,12 @@ img {
 
 					.button {
 						margin-top: 0;
-						margin-left: 10px;
 						background: purple;
 						color: white;
+
+						@media (#{$bp-larger-than-tablet}) {
+							margin-left: 10px;
+						}
 					}
 
 					.added_to_cart {

@@ -22,6 +22,21 @@
 		naturalHeight: 1080
 	});
 
+	$('.mejs-overlay-loading').closest('.mejs-overlay').addClass('load'); //just a helper class
+
+	var $video = $('div.video video');
+	var vidWidth = $video.attr('width');
+	var vidHeight = $video.attr('height');
+
+	$(window).resize(function() {
+		if ($(window).width() > 550) {
+			//$(window).resize(function() {
+			var targetWidth = $(this).width(); //using window width here will proportion the video to be full screen; adjust as needed
+			$('#banner, .video, .video .mejs-container').css('height', Math.ceil(vidHeight * (targetWidth / vidWidth) - 50));
+			//}).resize();
+		}
+	});
+
 })(jQuery);
 
 /*===========================
@@ -73,11 +88,21 @@
 	
 })(jQuery);
 
-/*==============================
-=            LOADER            =
-==============================*/
+/*===============================
+=            SLICKJS            =
+===============================*/
 
-
+(function($) {
+	$('.testimonials').slick({
+		autoplay: false,
+		infinite: true,
+		dots: true,
+		slidesToShow: 1,
+		adaptiveHeight: true,
+		arrows: false,
+		vertical: true
+	});
+})(jQuery);
 
 /*===============================
 =            HEADER             =

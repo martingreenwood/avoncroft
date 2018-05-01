@@ -98,12 +98,72 @@
 
 #banner {
 	margin-top: $site-border;
-    height: 50vh;
+    height: 80vh;
     background: transparent;
 	position: relative;
 
+	@media (#{$bp-larger-than-tablet}) {
+		height: 50vh;
+	}
+
+	&.has-video {
+		height: auto;
+	}
+
+	.video {
+		display: none;
+
+		@media (#{$bp-larger-than-tablet}) {
+			display: block;
+		}
+	}
+
+	.video-container {
+		position: relative;
+		padding-bottom: 56.25%;
+		padding-top: 30px;
+		height: 0;
+		overflow: hidden;
+	}
+
+	.wp-video, video.wp-video-shortcode, .mejs-container, .mejs-overlay.load {
+		width: 100% !important;
+		// height: 100% !important;
+	}
+	.mejs-container {
+		padding-top: 56.25%;
+	}
+	.wp-video, video.wp-video-shortcode {
+		max-width: 100% !important;
+	}
+	video.wp-video-shortcode {
+		position: relative;
+	}
+	.mejs-mediaelement {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
+	.mejs-controls {
+		display: none;
+	}
+	.mejs-overlay-play {
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		width: auto !important;
+		height: auto !important;
+	}
+
 	.squash {
-		width: 60%;
+		width: 100%;
+
+		@media (#{$bp-larger-than-desktop}) {
+			width: 60%;
+		}
 	}
 
 	.home-links {
@@ -119,6 +179,11 @@
 		.open-times {
 			float: left;
 			padding: 20px 0;
+			width: 100%;
+
+			@media (#{$bp-larger-than-tablet}) {
+				width: 64%;
+			}
 
 			.heading {
 				float: left;
@@ -126,7 +191,7 @@
 
 				svg, img {
 					display: block;
-					width: 24px;
+					width: 2.4rem;
 
 					g {
 						fill: $teal;
@@ -146,15 +211,28 @@
 
 		.tickets {
 			float: right;
+			display: none;
 
+			@media (#{$bp-larger-than-tablet}) {
+				display: block;
+			}
 			a {
 				background: $teal;
 				text-decoration: none;
 				text-transform: uppercase;
-				padding: 26px 35px;
-				font-size: 30px;
+				padding: 0 $site-border;
+				line-height: 99px;
+				font-size: 1.1rem;
 				letter-spacing: $spaced;
 				display: block;
+
+				@media (#{$bp-larger-than-desktop}) {
+					font-size: 1.8rem;
+				}
+
+				@media (#{$bp-larger-than-desktophd}) {
+					font-size: 2rem;
+				}
 			}
 		}
 	}
@@ -166,6 +244,11 @@
 		top: 0;
 		left: 0;
 		color: white;
+		background: rgba(0,0,0,0.4);
+
+		@media (#{$bp-larger-than-tablet}) {
+			background: transparent;
+		}
 
 		h1, h2, h3, h4 {
 			color: white;
@@ -176,20 +259,34 @@
 		br {
 			display: none;
 
-			@media (#{$bp-larger-than-phablet}) {
+			@media (#{$bp-larger-than-tablet}) {
 				display: block;
 			}
 		}
 
 		h1, h2 {
-			margin-bottom: 25px;
+			margin-bottom: 1.8rem;
 			text-transform: uppercase;
+			font-size: 2.6rem;
+
+			@media (#{$bp-larger-than-tablet}) {
+				font-size: 4rem;
+			}
+
+			@media (#{$bp-larger-than-desktop}) {
+				margin-bottom: 2.5rem;
+				font-size: 5.0rem;
+			}
 		}
 
 		h3 {
-			font-size: 1.6rem;
+			font-size: 1.3rem;
 			margin-bottom: 10px;
 			text-transform: uppercase;
+
+			@media (#{$bp-larger-than-tablet}) {
+				font-size: 1.6rem;
+			}
 
 			a {
 				background-color: none;
@@ -212,14 +309,22 @@
 		}
 
 		a {
-			margin-top: 25px;
-			padding: 10px 40px;
+			margin-top: 1.8rem;
+			padding: 10px;
 			text-decoration: none;
 			border: 1px solid white;
 			text-transform: uppercase;
 			color: white;
 			display: inline-block;
 			letter-spacing: $spaced;
+
+			@media (#{$bp-larger-than-tablet}) {
+				padding: 10px 40px;
+			}
+
+			@media (#{$bp-larger-than-desktop}) {
+				margin-top: 2.5rem;
+			}
 
 			-webkit-transition: all .25s linear;
 			   -moz-transition: all .25s linear;

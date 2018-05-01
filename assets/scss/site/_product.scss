@@ -60,14 +60,18 @@
 
 			.summary {
 				float: left;
-				width: 60%;
+				width: calc(100% + 45px);
 				clear: none;
 				padding: 45px;
-				padding-right: 90px;
 				background: white;
 				margin-top: -45px;
 				margin-left: -45px;
 				box-sizing: border-box;
+
+				@media (#{$bp-larger-than-tablet}) {
+					width: 60%;
+					padding-right: 45px;
+				}
 			}
 
 			.price {
@@ -82,8 +86,14 @@
 				padding: 45px;
 				margin-bottom: 45px;
 				color: white;
-				width: calc(60% - 125px);
+				width: calc(100% + 45px);
 				box-sizing: border-box;
+				margin-top: -45px;
+
+				@media (#{$bp-larger-than-tablet}) {
+					width: calc(60% - 125px);
+					margin-top: 0;
+				}
 
 				.cart {
 					margin-bottom: 0;
@@ -122,8 +132,19 @@
 
 					.quantity {
 						float: left;
-						margin: 0 13px 0 0;
-						padding: 0 19px 0 0;
+						margin: 0 10px 0 0;
+
+						.qty {
+							width: 3em;
+							padding-left: 10px;
+							padding-right: 10px;
+
+							@media (#{$bp-larger-than-tablet}) {
+								width: 3.61em;
+								padding-left: 15px;
+								padding-right: 15px;
+							}
+						}
 
 						.minus, .plus {
 							border-radius: 0;
@@ -151,6 +172,11 @@
 				width: 40%;
 				position: relative;
 				margin: 45px 0;
+				display: none;
+
+				@media (#{$bp-larger-than-tablet}) {
+					display: block;
+				}
 
 				img {
 					display: block;

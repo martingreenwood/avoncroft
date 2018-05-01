@@ -12,6 +12,19 @@
 
 	.the-collection {
 		margin-bottom: $site-border;
+		margin-top: 225px;
+
+		.container {
+		width: 100%;
+
+			@media (#{$bp-larger-than-tablet}) {
+				width: 85%;
+			}
+		}
+		
+		@media (#{$bp-larger-than-tablet}) {
+			margin-top: 0;
+		}
 
 		.row {
 			direction: ltr;
@@ -23,6 +36,13 @@
 					direction: ltr;
 				}
 			}
+
+			&:last-of-type {
+
+				.element {
+					margin-bottom: 0;
+				}
+			}
 		}
 
 		.element {
@@ -31,6 +51,11 @@
 			display: inline-block;
 			float: none;
 			clear: none;
+			margin-bottom: 170px;
+			
+			@media (#{$bp-larger-than-tablet}) {
+				margin-bottom: 0;
+			}
 		}
 
 		.six {
@@ -39,9 +64,18 @@
 
 		.text {
 			background: white;
-			padding: 140px;
+			padding: 45px;
 			box-sizing: border-box;
 			height: calc(100% - 90px);
+			width: 100%;
+			position: relative;
+			z-index: 1;
+
+			@media (#{$bp-larger-than-tablet}) {
+				padding: 140px;
+				width: 49.7752%;
+				z-index: 1;
+			}
 
 			h1, h3, h3 {
 				text-transform: uppercase;
@@ -50,6 +84,15 @@
 
 		.image {
 			z-index: 1;
+			position: absolute;
+			margin: -170px 0 0 0;
+			width: 80%;
+
+			@media (#{$bp-larger-than-tablet}) {
+				position: relative;
+				margin: 0;
+				width: 49.7752%;
+			}
 
 			img {
 				width: 100%;
@@ -61,11 +104,19 @@
 			&:nth-child(odd) {
 
 				.image {
-					position: relative;
+					position: absolute;
+
+					@media (#{$bp-larger-than-tablet}) {
+						position: relative;
+					}
 
 					img {
 						width: calc(100% + 45px);
-						margin-left: 45px;
+							margin-left: -45px;
+
+						@media (#{$bp-larger-than-tablet}) {
+							margin-left: 45px;
+						}
 					}
 				}
 
@@ -77,11 +128,18 @@
 			&:nth-child(even) {
 
 				.image {
-					position: relative;
+					position: absolute;
+
+					@media (#{$bp-larger-than-tablet}) {
+						position: relative;
+					}
 
 					img {
 						width: calc(100% + 45px);
-						margin-left: -90px;
+
+						@media (#{$bp-larger-than-tablet}) {
+							margin-left: -90px;
+						}
 					}
 				}
 			}
