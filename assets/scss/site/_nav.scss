@@ -41,7 +41,8 @@
 		line-height: 1;
 		transform: rotate(90deg);
 		transform-origin: top left;
-		border: 0;
+		border: 1px solid $light-grey;
+		border-top: 0;
 		height: auto;
 		display: block;
 		border-radius: 0;
@@ -60,12 +61,14 @@
 		border-radius: 0;
 		position: absolute;
 		z-index: 999;
-		left: -60px;
+		left: -61px;
 		background: #b55d80;
 		text-align: center;
 		line-height: 60px;
 		top: -60px;
 		display: block;
+		border: 1px solid $light-grey;
+		border-right: 0;
 	
 		a {
 			padding: 20px;

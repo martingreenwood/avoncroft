@@ -4,8 +4,8 @@
 // Breakpoints
 $bp-larger-than-mobile    : "min-width: 400px" !default;
 $bp-larger-than-phablet   : "min-width: 550px" !default;
-$bp-larger-than-tablet    : "min-width: 750px" !default;
-$bp-smaller-than-tablet    : "max-width: 750px" !default;
+$bp-larger-than-tablet    : "min-width: 770px" !default;
+$bp-smaller-than-tablet    : "max-width: 770px" !default;
 $bp-larger-than-desktop   : "min-width: 1160px" !default;
 $bp-smaller-than-desktop   : "max-width: 1160px" !default;
 $bp-larger-than-desktophd : "min-width: 1266px" !default;
@@ -45,7 +45,7 @@ $slanty-font-family: $slanty-font !default;
 //Grid Variables
 $container-width: 1200px !default;
 $container-width-larger-than-mobile: 85% !default;
-$container-width-larger-than-phablet: 80% !default;
+$container-width-larger-than-phablet: 85% !default;
 $total-columns: 12 !default;
 $column-width: 100 / $total-columns !default; // calculates individual column width based off of # of columns
 $column-margin: 4% !default; // space between columns
@@ -56,6 +56,8 @@ $site-border: 45px !default;
 $site-borderx2: 90px !default;
 $site-borderx3: 135px !default;
 $site-borderx4: 180px !default;
+
+$sixwidth: 49.6% !default;
 
 $spaced: 5px !default;
 

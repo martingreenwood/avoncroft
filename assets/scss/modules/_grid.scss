@@ -14,7 +14,6 @@
   max-width: $container-width;
   min-width: 0px;
   margin: 0 auto;
-  padding: 0 20px;
   box-sizing: border-box;
 }
 
@@ -41,7 +40,6 @@
 @media (#{$bp-larger-than-mobile}) {
   .container {
     width: $container-width-larger-than-mobile;
-    padding: 0;
   }
 }
 

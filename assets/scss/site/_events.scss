@@ -13,6 +13,10 @@
 
 	.container {
 		width: 100%;
+
+		@media (#{$bp-larger-than-tablet}) {
+			width: 85%;
+		}
 	}
 
 	#primary {

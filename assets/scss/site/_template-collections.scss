@@ -15,7 +15,7 @@
 		margin-top: 225px;
 
 		.container {
-		width: 100%;
+			width: 100%;
 
 			@media (#{$bp-larger-than-tablet}) {
 				width: 85%;
@@ -23,7 +23,7 @@
 		}
 		
 		@media (#{$bp-larger-than-tablet}) {
-			margin-top: 0;
+			margin-top: 45px;
 		}
 
 		.row {
@@ -59,7 +59,7 @@
 		}
 
 		.six {
-			width: 49.7752%;
+			width: $sixwidth;
 		}
 
 		.text {
@@ -72,9 +72,13 @@
 			z-index: 1;
 
 			@media (#{$bp-larger-than-tablet}) {
-				padding: 140px;
-				width: 49.7752%;
+				padding: 45px 45px 45px 45px;
+				width: $sixwidth;
 				z-index: 1;
+			}
+
+			@media (#{$bp-larger-than-desktop}) {
+				padding: 140px;
 			}
 
 			h1, h3, h3 {
@@ -90,8 +94,9 @@
 
 			@media (#{$bp-larger-than-tablet}) {
 				position: relative;
+				z-index: 2;
 				margin: 0;
-				width: 49.7752%;
+				width: $sixwidth;
 			}
 
 			img {
@@ -122,6 +127,9 @@
 
 				.text {
 					// padding-left: $site-borderx2;
+					@media (#{$bp-larger-than-tablet}) {
+						padding-left: 150px;
+					}
 				}
 			}
 
@@ -140,6 +148,12 @@
 						@media (#{$bp-larger-than-tablet}) {
 							margin-left: -90px;
 						}
+					}
+				}
+
+				.text {
+					@media (#{$bp-larger-than-tablet}) {
+						padding-right: 150px;
 					}
 				}
 			}
